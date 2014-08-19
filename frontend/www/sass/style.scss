@@ -1,0 +1,527 @@
+@import "lib/base"; // mixins, sprites
+@import "common"; // def styles, resets
+
+html, body {
+	height: 100%;
+}
+
+$sidebar-width: 250px;
+$font-size: 12px;
+$font-size-small: 10px;
+$icons: sprite-map("icons/*.png", $spacing: 10px);
+
+body {
+	position: relative;
+	background: #fff;
+	font: $font-size Tahoma, "Geneva CY", sans-serif;;
+	min-height: 100%;
+	min-width: 1007px;
+}
+a {
+	color:#000;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+h2{
+	font-size:20px;
+	line-height:22px;
+	margin-bottom:10px;
+	font-weight:normal;
+	a{
+		text-decoration: none;
+	}
+}
+$socialIcons: tw, ok, vk, fb;
+#header{
+	background-color: #000;
+	color:#fff;
+	padding:0 1000px;
+	margin:0 -1000px;
+	@extend %clr;
+	height:216px;
+	display: table;
+	width: 100%;
+	.logo{
+		background: url(../images/logo.png) no-repeat 0 154px;
+		display: table-cell;
+		height: image-height('logo.png');
+		margin: 5px 0 0;
+		text-indent: -9999px;
+		width: image-width('logo.png');
+		vertical-align: bottom;
+	}
+	.main-nav{
+		display: table-cell;
+		vertical-align: bottom;
+		padding-bottom: 20px;
+		ul{
+		list-style: none outside;
+		float:right;
+		li{
+			float:left;
+			a{
+				display: inline-block;
+				*display:inline;
+				zoom:1;
+				color:#fff;
+				font-size: 14px;
+				padding: 0 20px;
+				border-left:1px solid #fff;
+				text-decoration: none;
+				line-height: 1;
+				&:hover{
+					text-decoration: underline;
+				}
+				&.active {
+					text-decoration: underline;
+				}
+			}
+			&:first-child  a{
+				border-left:none;
+				}
+			}
+		}
+	}
+	.header-block{
+		display: table-cell;
+		vertical-align: bottom;
+		padding-bottom: 20px;
+		width:250px;
+		padding-left: 50px;
+		.social{
+			list-style: none outside;
+			overflow: hidden;
+			margin-bottom: 10px;
+			li{
+				float:left;
+				a{
+					display:inline-block;
+					*display:inline;
+					zoom:1;
+					text-indent: -9999px;
+					width:35px;
+					height:35px;
+					margin-right:4px;
+					@each $i in $socialIcons {
+						&.#{$i} {
+							@include sized-sprite($icons, #{$i});
+						}
+					}
+				}
+
+			}
+		}
+		.search{
+			position: relative;
+			input[type="text"]{
+				padding: 0 5px 0 30px;
+				width:100%;
+				height:22px;
+				line-height:22px;
+				outline: none;
+			}
+			input[type="submit"]{
+				background: url(../images/search.png) no-repeat;
+				width:image-width('search.png');
+				height:image-height('search.png');
+				border:none;
+				position: absolute;
+				top:3px;
+				left:5px;
+				cursor:pointer;
+				text-indent: -9999px;
+			}
+		}
+	}
+}
+#wrapper {
+	min-height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.inner{
+	width: 1000px;
+	margin: 0 auto;
+}
+#main{
+	padding-bottom: 300px;
+	@extend %clr;
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+.small{
+	color:#939597;
+	font-size: $font-size-small;
+}
+.button{
+	background-color: #d1d2d4;
+	padding:10px 50px;
+	display: inline-block;
+	*display:inline;
+	zoom:1;
+	@include border-radius(5px);
+	text-decoration: none;
+	font-size: 14px;
+}
+.container {
+	float: left;
+	width: 100%;
+	margin-right: -($sidebar-width+70);
+	.content{
+		margin-right: $sidebar-width+70;
+		padding: 30px 0 0 0;
+		.title{
+			background-color: #d1d2d4;
+			padding:5px 15px;
+			margin-bottom: 5px;
+		}
+		.content-block{
+			padding-bottom: 50px;
+			overflow: hidden;
+			img{
+				float:left;
+				margin-right:20px;
+			}
+			&>div{
+				overflow: hidden;
+				span{
+					border-top:2px solid #e8e9ea;
+					min-width:230px;
+					display: inline-block;
+					padding-top:10px;
+					margin-bottom:15px;
+				}
+			}
+		}
+		p{
+			margin-bottom:10px;
+		}
+		.slider{
+			margin-bottom:20px;
+			position: relative;
+			.slides_container {
+				width:680px;
+				height:394px;
+				display:none;
+
+			}
+			.slides_container img {
+				width:680px;
+				display:block;
+			}
+
+			.prev,
+			.next {
+				display: block;
+				margin-top: - image-height('icons/slide-prew.png')/2;
+				text-indent: -1000px;
+				overflow: hidden;
+				cursor: pointer;
+				@include opacity(.5);
+				position: absolute;
+				top: 50%;
+				z-index: 50;
+				&:hover {
+					@include opacity(1);
+				}
+			}
+			.prev {
+				@include sized-sprite($icons, 'slide-prew');
+				width: image-width('icons/slide-prew.png');
+				height: image-height('icons/slide-prew.png');
+				left: 20px;
+			}
+			.next {
+				@include sized-sprite($icons, 'slide-next');
+				width: image-width('icons/slide-next.png');
+				height: image-height('icons/slide-next.png');
+				right: 20px;
+			}
+			img{
+				height:auto;
+				z-index: 1;
+			}
+		}
+		.comments{
+			border-top: 1px solid #231f20;
+			padding-top: 20px;
+			h3{
+				color:#939597;
+				margin-bottom:20px;
+			}
+			.comment{
+				margin-bottom:20px;
+				img{
+					float:left;
+					margin-right:10px;
+				}
+				&>div{
+					overflow: hidden;
+					p{
+						margin-bottom: 0;
+					}
+				}
+				.small{
+					display: inline-block;
+					margin-top:5px;
+				}
+			}
+		}
+		h2 + span{
+			margin-bottom: 15px;
+			display: inline-block;
+		}
+		.partner{
+			margin:30px 0;
+			overflow: hidden;
+			h3{
+				margin-bottom:10px;
+			}
+			img{
+				float:left;
+				margin-right:30px;
+			}
+			&>div{
+				overflow: hidden;
+			}
+			.small{
+				font-size:11px;
+				span{
+					margin-right:20px;
+					display:inline-block;
+				}
+			}
+
+		}
+		.rubric{
+			img{
+				margin-bottom:20px;
+			}
+			p{
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+.pagination{
+	list-style: none outside;
+	text-align: center;
+	font-size:0;
+	li{
+		display: inline-block;
+		font-size: $font-size;
+		border-left: 1px solid #000;
+		&.active-page{
+			font-weight: bold;
+			padding: 0 5px;
+		}
+		&.last{
+			border-left: none;
+		}
+		a{
+			text-decoration: none;
+			padding:0 5px;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		&:first-child{
+			border-left: none;
+		}
+	}
+}
+
+/*  ==============	Album lists in gallery	========================================*/
+.album-list {
+	@extend %clr;
+	list-style: none;
+	margin: {
+		left: -10px;
+		bottom: 50px;
+	}
+	li {
+		float: left;
+		width: 50%;
+		a {
+			display: block;
+			margin: {
+				left: 10px;
+				bottom: 10px;
+			}
+			text-decoration: none;
+			color: #fff;
+			position: relative;
+			img {
+				display: block;
+				width: 100%;
+			}
+			& > span {
+				display: block;
+				padding: 0 10px 10px;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				z-index: 2;
+				.album-title {
+					display: block;
+					font-size: 24px;
+				}
+				p {
+					margin: 10px 0;
+				}
+				.album-date {
+					font-size: 9px;
+				}
+			}
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 90px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 1;
+				@include background-image(linear-gradient(rgba(255,255,255,.1), #000));
+			}
+		}
+	}
+	&.article-album {
+		margin-bottom: 10px;
+		li {
+			a {
+				& > span {
+					.album-title {
+						font-size: 20px;
+					}
+					.album-date {
+						display: block;
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*  ==============	List of photos inside album	========================================*/
+.photo-list {
+	@extend %clr;
+	list-style: none;
+	margin-left: -5px;
+	li {
+		float: left;
+		width: 25%;
+		a {
+			display: block;
+			margin: {
+				left: 5px;
+				bottom: 5px;
+			}
+			height: 174px;
+			text-decoration: none;
+			color: #fff;
+			position: relative;
+			overflow: hidden;
+			img {
+				display: block;
+				height: 100%;
+				max-width: none;
+			}
+		}
+	}
+}
+/*	================= Horoscope page ==================*/
+.container .content .horoscope .content-block > div span {
+	border-top: none;
+	padding: 0;
+	margin: 0;
+}
+.horoscope .block-title {
+	font-size: 20px;
+	line-height: 22px;
+}
+/*	================= Sidebar ==================*/
+.sidebar {
+	float: right;
+	width: $sidebar-width;
+	padding: 30px 0 0 0;
+	.journal{
+		text-align: center;
+		margin-bottom:50px;
+		img{
+			margin-bottom:20px;
+		}
+		p{
+			display: inline-block;
+			border-top:1px solid #808080;
+			border-bottom:1px solid #808080;
+			margin: 0 0px 17px;
+			padding: 4px 0;
+			font-size: 14px;
+		}
+	}
+	.banners{
+		img{
+			margin-bottom:30px;
+		}
+	}
+	.horoscope{
+		border-top:1px solid #808080;
+		border-bottom:1px solid #808080;
+		padding:25px 0 25px 0px;
+		a {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		& > div {
+			overflow: hidden;
+		}
+		img{
+			width:60px;
+			float:left;
+			margin-right:10px;
+			margin-left:-5px;
+		}
+	}
+
+}
+#footer {
+	background-color: #000;
+	color:#fff;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 35px 0;
+	ul{
+		list-style: none outside;
+		padding-left: 10px;
+		li{
+			display: inline-block;
+			*display:inline;
+			zoom:1;
+			vertical-align: middle;
+			a{
+				margin-right: 10px;
+			}
+		}
+	}
+	span{
+		display: block;
+		padding-left: 16px;
+		padding-bottom: 5px;
+		border-bottom:1px solid #3f3f3f;
+		margin-bottom:10px;
+	}
+}

@@ -1,0 +1,158 @@
+#header, #main, .album-list, .photo-list { *zoom: 1; }
+#header:before, #main:before, .album-list:before, .photo-list:before, #header:after, #main:after, .album-list:after, .photo-list:after { content: " "; display: table; }
+#header:after, #main:after, .album-list:after, .photo-list:after { clear: both; }
+
+* { margin: 0; padding: 0; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
+button::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner { padding: 0; border: 0; }
+
+input[type=text], input[type=password], input[type=email], textarea { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+
+body { font-family: Arial,sans-serif; font-weight: normal; font-size: 12px; line-height: 1.4; }
+
+a img, fieldset { border: none; }
+
+html, body { height: 100%; }
+
+body { position: relative; background: #fff; font: 12px Tahoma, "Geneva CY", sans-serif; min-height: 100%; min-width: 1007px; }
+
+a { color: #000; }
+a:hover { text-decoration: underline; }
+
+h2 { font-size: 20px; line-height: 22px; margin-bottom: 10px; font-weight: normal; }
+h2 a { text-decoration: none; }
+
+#header { background-color: #000; color: #fff; padding: 0 1000px; margin: 0 -1000px; height: 216px; display: table; width: 100%; }
+#header .logo { background: url(../images/logo.png) no-repeat 0 154px; display: table-cell; height: 52px; margin: 5px 0 0; text-indent: -9999px; width: 204px; vertical-align: bottom; }
+#header .main-nav { display: table-cell; vertical-align: bottom; padding-bottom: 20px; }
+#header .main-nav ul { list-style: none outside; float: right; }
+#header .main-nav ul li { float: left; }
+#header .main-nav ul li a { display: inline-block; *display: inline; zoom: 1; color: #fff; font-size: 14px; padding: 0 20px; border-left: 1px solid #fff; text-decoration: none; line-height: 1; }
+#header .main-nav ul li a:hover { text-decoration: underline; }
+#header .main-nav ul li a.active { text-decoration: underline; }
+#header .main-nav ul li:first-child a { border-left: none; }
+#header .header-block { display: table-cell; vertical-align: bottom; padding-bottom: 20px; width: 250px; padding-left: 50px; }
+#header .header-block .social { list-style: none outside; overflow: hidden; margin-bottom: 10px; }
+#header .header-block .social li { float: left; }
+#header .header-block .social li a { display: inline-block; *display: inline; zoom: 1; text-indent: -9999px; width: 35px; height: 35px; margin-right: 4px; }
+#header .header-block .social li a.tw { background: url('../images/icons-s6e1a3b7272.png') 0 -201px no-repeat; width: 28px; height: 28px; }
+#header .header-block .social li a.ok { background: url('../images/icons-s6e1a3b7272.png') 0 -163px no-repeat; width: 28px; height: 28px; }
+#header .header-block .social li a.vk { background: url('../images/icons-s6e1a3b7272.png') 0 -239px no-repeat; width: 29px; height: 28px; }
+#header .header-block .social li a.fb { background: url('../images/icons-s6e1a3b7272.png') 0 -277px no-repeat; width: 29px; height: 28px; }
+#header .header-block .search { position: relative; }
+#header .header-block .search input[type="text"] { padding: 0 5px 0 30px; width: 100%; height: 22px; line-height: 22px; outline: none; }
+#header .header-block .search input[type="submit"] { background: url(../images/search.png) no-repeat; width: 17px; height: 16px; border: none; position: absolute; top: 3px; left: 5px; cursor: pointer; text-indent: -9999px; }
+
+#wrapper { min-height: 100%; position: relative; overflow: hidden; }
+
+.inner { width: 1000px; margin: 0 auto; }
+
+#main { padding-bottom: 300px; }
+
+img { max-width: 100%; height: auto; }
+
+.small { color: #939597; font-size: 10px; }
+
+.button { background-color: #d1d2d4; padding: 10px 50px; display: inline-block; *display: inline; zoom: 1; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; text-decoration: none; font-size: 14px; }
+
+.container { float: left; width: 100%; margin-right: -320px; }
+.container .content { margin-right: 320px; padding: 30px 0 0 0; }
+.container .content .title { background-color: #d1d2d4; padding: 5px 15px; margin-bottom: 5px; }
+.container .content .content-block { padding-bottom: 50px; overflow: hidden; }
+.container .content .content-block img { float: left; margin-right: 20px; }
+.container .content .content-block > div { overflow: hidden; }
+.container .content .content-block > div span { border-top: 2px solid #e8e9ea; min-width: 230px; display: inline-block; padding-top: 10px; margin-bottom: 15px; }
+.container .content p { margin-bottom: 10px; }
+.container .content .slider { margin-bottom: 20px; position: relative; }
+.container .content .slider .slides_container { width: 680px; height: 394px; display: none; }
+.container .content .slider .slides_container img { width: 680px; display: block; }
+.container .content .slider .prev, .container .content .slider .next { display: block; margin-top: -24.5px; text-indent: -1000px; overflow: hidden; cursor: pointer; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; position: absolute; top: 50%; z-index: 50; }
+.container .content .slider .prev:hover, .container .content .slider .next:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
+.container .content .slider .prev { background: url('../images/icons-s6e1a3b7272.png') 0 0 no-repeat; width: 49px; height: 49px; width: 49px; height: 49px; left: 20px; }
+.container .content .slider .next { background: url('../images/icons-s6e1a3b7272.png') 0 -59px no-repeat; width: 49px; height: 49px; width: 49px; height: 49px; right: 20px; }
+.container .content .slider img { height: auto; z-index: 1; }
+.container .content .comments { border-top: 1px solid #231f20; padding-top: 20px; }
+.container .content .comments h3 { color: #939597; margin-bottom: 20px; }
+.container .content .comments .comment { margin-bottom: 20px; }
+.container .content .comments .comment img { float: left; margin-right: 10px; }
+.container .content .comments .comment > div { overflow: hidden; }
+.container .content .comments .comment > div p { margin-bottom: 0; }
+.container .content .comments .comment .small { display: inline-block; margin-top: 5px; }
+.container .content h2 + span { margin-bottom: 15px; display: inline-block; }
+.container .content .partner { margin: 30px 0; overflow: hidden; }
+.container .content .partner h3 { margin-bottom: 10px; }
+.container .content .partner img { float: left; margin-right: 30px; }
+.container .content .partner > div { overflow: hidden; }
+.container .content .partner .small { font-size: 11px; }
+.container .content .partner .small span { margin-right: 20px; display: inline-block; }
+.container .content .rubric img { margin-bottom: 20px; }
+.container .content .rubric p { margin-bottom: 15px; }
+
+.pagination { list-style: none outside; text-align: center; font-size: 0; }
+.pagination li { display: inline-block; font-size: 12px; border-left: 1px solid #000; }
+.pagination li.active-page { font-weight: bold; padding: 0 5px; }
+.pagination li.last { border-left: none; }
+.pagination li a { text-decoration: none; padding: 0 5px; }
+.pagination li a:hover { text-decoration: underline; }
+.pagination li:first-child { border-left: none; }
+
+/*  ==============    Album lists in gallery    ========================================*/
+.album-list { list-style: none; margin-left: -10px; margin-bottom: 50px; }
+.album-list li { float: left; width: 50%; }
+.album-list li a { display: block; margin-left: 10px; margin-bottom: 10px; text-decoration: none; color: #fff; position: relative; }
+.album-list li a img { display: block; width: 100%; }
+.album-list li a > span { display: block; padding: 0 10px 10px; position: absolute; bottom: 0px; left: 0px; right: 0px; z-index: 2; }
+.album-list li a > span .album-title { display: block; font-size: 24px; }
+.album-list li a > span p { margin: 10px 0; }
+.album-list li a > span .album-date { font-size: 9px; }
+.album-list li a:before { content: ''; display: block; position: absolute; top: 90px; bottom: 0; left: 0; right: 0; z-index: 1; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, #000000)); background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), #000000); background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.1), #000000); background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), #000000); background-image: linear-gradient(rgba(255, 255, 255, 0.1), #000000); }
+.album-list.article-album { margin-bottom: 10px; }
+.album-list.article-album li a > span .album-title { font-size: 20px; }
+.album-list.article-album li a > span .album-date { display: block; margin-top: 10px; }
+
+/*  ==============    List of photos inside album    ========================================*/
+.photo-list { list-style: none; margin-left: -5px; }
+.photo-list li { float: left; width: 25%; }
+.photo-list li a { display: block; margin-left: 5px; margin-bottom: 5px; height: 174px; text-decoration: none; color: #fff; position: relative; overflow: hidden; }
+.photo-list li a img { display: block; height: 100%; max-width: none; }
+
+
+.container .content .horoscope .content-block > div span { border-top: none; padding: 0; margin: 0; }
+
+.horoscope .block-title { font-size: 20px; line-height: 22px; }
+/*    ================= Horoscope page ==================*/
+/*    ================= Sidebar ==================*/
+.sidebar { float: right; width: 250px; padding: 30px 0 0 0; }
+.sidebar .journal { text-align: center; margin-bottom: 50px; }
+.sidebar .journal img { margin-bottom: 20px; }
+.sidebar .journal p { display: inline-block; border-top: 1px solid #808080; border-bottom: 1px solid #808080; margin: 0 0px 17px; padding: 4px 0; font-size: 14px; }
+.sidebar .banners img { margin-bottom: 30px; }
+.sidebar .horoscope { border-top: 1px solid #808080; border-bottom: 1px solid #808080; padding: 25px 0 25px 0px; }
+.sidebar .horoscope a { display: block; margin-bottom: 5px; font-weight: bold; text-transform: uppercase; text-decoration: none; }
+.sidebar .horoscope a:hover { text-decoration: underline; }
+.sidebar .horoscope > div { overflow: hidden; }
+.sidebar .horoscope img { width: 60px; float: left; margin-right: 10px; margin-left: -5px; }
+
+#footer { background-color: #000; color: #fff; position: absolute; left: 0; bottom: 0; width: 100%; padding: 35px 0; }
+#footer ul { list-style: none outside; padding-left: 10px; }
+#footer ul li { display: inline-block; *display: inline; zoom: 1; vertical-align: middle; }
+#footer ul li a { margin-right: 10px; }
+#footer span { display: block; padding-left: 16px; padding-bottom: 5px; border-bottom: 1px solid #3f3f3f; margin-bottom: 10px; }
+
+#site-search { margin-bottom: 20px; margin-top: 20px; }
+
+.slider-article .bx-wrapper .bx-prev {
+    left: -40px;
+}
+.slider-article .bx-wrapper .bx-next {
+    right: -40px;
+}
+blockquote {
+    color: #777777;
+    font-style: italic !important;
+    margin-left: 45px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

@@ -1,0 +1,171 @@
+.button.delete span b, .button.edit span b,.button.on span b,.button.off span b, .button.rss span b, .button.watch span b,.button.informer span b,
+.button.add span b,.button.print span b, .button.view span b{
+    display:block;
+    width:16px!important;
+    height:16px;}
+
+.button.delete span b{ background:url(../img/icons.png) -2px -102px no-repeat;}
+.button.edit span b{background:url(../img/icons.png) -2px -122px no-repeat;}
+.button.on span b{background:url(../img/icons.png) -2px -2px no-repeat;}
+.button.off span b{background:url(../img/icons.png) -2px -22px no-repeat;}
+.button.rss span b{background:url(../img/icons.png) -2px -142px no-repeat;}
+.button.watch.on span b{background:url(../img/icons.png) -2px -42px no-repeat;}
+.button.watch.off span b{background:url(../img/icons.png) -2px -62px no-repeat;}
+.button.add span b{background:url(../img/icons.png) -2px -202px no-repeat;}
+.button.print span b{background:url(../img/icons.png) -2px -222px no-repeat;}
+.button.view span b{background:url(../img/icons.png) -2px -242px no-repeat;}
+
+.button.informer.on span b{background:url(../img/icons.png) -2px -162px no-repeat;}
+.button.informer.off span b{background:url(../img/icons.png) -2px -182px no-repeat;}
+.button.informer{width:83px;}
+.button.informer span i{font-style:normal;}
+
+.button{
+    color:#000!important;
+    text-decoration:none!important;
+    width:16px!important;
+    height:16px;
+    line-height:18px;
+
+    text-align:center;
+
+    display:block;
+
+    padding:1px;
+
+    border:1px solid #707070;
+
+    background:#fcfcfc;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fcfcfc), to(#f3f3f3));
+    background: -webkit-linear-gradient(#fcfcfc, #f3f3f3);
+    background: -moz-linear-gradient(#fcfcfc, #f3f3f3);
+    background: -ms-linear-gradient(#fcfcfc, #f3f3f3);
+    background: -o-linear-gradient(#fcfcfc, #f3f3f3);
+    background: linear-gradient(#fcfcfc, #f3f3f3);
+    -pie-background: linear-gradient(#fcfcfc, #f3f3f3);
+
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+
+    position:relative; zoom:1;
+    behavior: url(/css/PIE.htc);
+}
+
+.button span{
+    cursor:pointer;
+
+    display:block;
+
+    background: #f2f2f2;
+    background: -moz-linear-gradient(top, #f2f2f2 0%, #ebebeb 50%, #ddd 50%, #cfcfcf 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(50%,#ebebeb), color-stop(50%,#ddd), color-stop(100%,#cfcfcf));
+    background: -webkit-linear-gradient(top, #f2f2f2 0%,#ebebeb 50%,#ddd 50%,#cfcfcf 100%);
+    background: -o-linear-gradient(top, #f2f2f2 0%,#ebebeb 50%,#ddd 50%,#cfcfcf 100%);
+    background: -ms-linear-gradient(top, #f2f2f2 0%,#ebebeb 50%,#ddd 50%,#cfcfcf 100%);
+    background: linear-gradient(to bottom, #f2f2f2 0%,#ebebeb 50%,#ddd 50%,#cfcfcf 100%);
+    -pie-background: linear-gradient(#f2f2f2, #ebebeb  50%, #ddd 50%, #cfcfcf);
+
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+
+    position:relative; zoom:1;
+    behavior: url(/css/PIE.htc);
+}
+
+
+.button:hover{
+    border:1px solid #3c7fb1;
+
+    background:#fafdfe;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fafdfe), to(#e8f5fc));
+    background: -webkit-linear-gradient(#fafdfe, #e8f5fc);
+    background: -moz-linear-gradient(#fafdfe, #e8f5fc);
+    background: -ms-linear-gradient(#fafdfe, #e8f5fc);
+    background: -o-linear-gradient(#fafdfe, #e8f5fc);
+    background: linear-gradient(#fafdfe, #e8f5fc);
+    -pie-background: linear-gradient(#fafdfe, #e8f5fc);
+}
+
+.button:hover span{
+    background: #eaf6fd;
+    background: -moz-linear-gradient(top, #eaf6fd 0%, #d9f0fc 50%, #bee6fd 50%, #a7d9f5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaf6fd), color-stop(50%,#d9f0fc), color-stop(50%,#bee6fd), color-stop(100%,#a7d9f5));
+    background: -webkit-linear-gradient(top, #eaf6fd 0%,#d9f0fc 50%,#bee6fd 50%,#a7d9f5 100%);
+    background: -o-linear-gradient(top, #eaf6fd 0%,#d9f0fc 50%,#bee6fd 50%,#a7d9f5 100%);
+    background: -ms-linear-gradient(top, #eaf6fd 0%,#d9f0fc 50%,#bee6fd 50%,#a7d9f5 100%);
+    background: linear-gradient(to bottom, #eaf6fd 0%,#d9f0fc 50%,#bee6fd 50%,#a7d9f5 100%);
+
+    -pie-background: linear-gradient(#eaf6fd, #d9f0fc  50%, #bee6fd 50%, #a7d9f5);
+    position:relative; zoom:1;
+    behavior: url(/css/PIE.htc);
+}
+
+.button:active{
+    border:1px solid #2c628b;
+
+    background:#9eb0ba;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#9eb0ba), to(#9abacb));
+    background: -webkit-linear-gradient(#9eb0ba, #9abacb);
+    background: -moz-linear-gradient(#9eb0ba, #9abacb);
+    background: -ms-linear-gradient(#9eb0ba, #9abacb);
+    background: -o-linear-gradient(#9eb0ba, #9abacb);
+    background: linear-gradient(#9eb0ba, #9abacb);
+    -pie-background: linear-gradient(#9eb0ba, #9abacb);
+
+    padding-bottom:0;
+}
+
+.button:active span{
+    background: #e5f4fc;
+    background: -moz-linear-gradient(top, #e5f4fc 0%, #c4e5f6 50%, #98d1ef 50%, #68b3db 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5f4fc), color-stop(50%,#c4e5f6), color-stop(50%,#98d1ef), color-stop(100%,#68b3db));
+    background: -webkit-linear-gradient(top, #e5f4fc 0%,#c4e5f6 50%,#98d1ef 50%,#68b3db 100%);
+    background: -o-linear-gradient(top, #e5f4fc 0%,#c4e5f6 50%,#98d1ef 50%,#68b3db 100%);
+    background: -ms-linear-gradient(top, #e5f4fc 0%,#c4e5f6 50%,#98d1ef 50%,#68b3db 100%);
+    background: linear-gradient(to bottom, #e5f4fc 0%,#c4e5f6 50%,#98d1ef 50%,#68b3db 100%);
+
+    -pie-background: linear-gradient(#e5f4fc, #c4e5f6  50%, #98d1ef 50%, #68b3db);
+    position:relative; zoom:1;
+    behavior: url(/css/PIE.htc);
+
+    padding-bottom:1px;
+}
+/*Float*/
+.fl{}
+.fl-n{float:none!important;}
+.fl-l{float:left!important;}
+.fl-r{float:right!important;}
+.mr-5{
+    margin-right: 5px;
+}
+.backend-page {
+    margin: 20px auto !important;
+    width: 1215px !important;
+}
+.mr-20 {
+    margin-right: 20px;
+}
+#content {
+    float: right;
+    width: 1070px;
+}
+.hide {
+    display: none;
+}
+.input-width-magazine input{
+    width: 20px;
+}
+
+.grid-loading
+{
+    background:url(../img/loading.gif) no-repeat;
+    width: 16px; 
+    height: 16px; 
+    float: left;
+}
+.mb-200 {
+    margin-bottom: 200px;
+}
+

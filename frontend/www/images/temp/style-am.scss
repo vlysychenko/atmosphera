@@ -1,0 +1,115 @@
+@import "lib/base"; // mixins, sprites
+
+/*  ==============	Album lists in gallery	========================================*/
+.album-list {
+	@extend %clr;
+	list-style: none;
+	margin: {
+		left: -10px;
+		bottom: 50px;
+	}
+	li {
+		float: left;
+		width: 50%;
+		a {
+			display: block;
+			margin: {
+				left: 10px;
+				bottom: 10px;
+			}
+			text-decoration: none;
+			color: #fff;
+			position: relative;
+			img {
+				display: block;
+				width: 100%;
+			}
+			& > span {
+				display: block;
+				padding: 0 10px 10px;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				z-index: 2;
+				.album-title {
+					display: block;
+					font-family: 'Conv_Didona','Times New Roman', serif;
+					font-size: 24px;
+				}
+				p {
+					margin: 10px 0;
+				}
+				.album-date {
+					font-size: 9px;
+				}
+			}
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 90px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 1;
+				@include background-image(linear-gradient(rgba(255,255,255,.1), #000));
+			}
+		}
+	}
+	&.article-album {
+		margin-bottom: 10px;
+		li {
+			a {
+				& > span {
+					.album-title {
+						font-size: 20px;
+					}
+					.album-date {
+						display: block;
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*  ==============	List of photos inside album	========================================*/
+.photo-list {
+	@extend %clr;
+	list-style: none;
+	margin-left: -5px;
+	li {
+		float: left;
+		width: 25%;
+		a {
+			display: block;
+			margin: {
+				left: 5px;
+				bottom: 5px;
+			}
+			height: 174px;
+			text-decoration: none;
+			color: #fff;
+			position: relative;
+			overflow: hidden;
+			img {
+				display: block;
+				height: 100%;
+				max-width: none;
+			}
+		}
+	}
+}
+/*	================= Horoscope page ==================*/
+.container .content .horoscope .content-block > div span {
+	border-top: none;
+	padding: 0;
+	margin: 0;
+}
+.horoscope .block-title {
+	font-family: 'Conv_Didona','Times New Roman', serif;
+	font-size: 20px;
+	line-height: 22px;
+}

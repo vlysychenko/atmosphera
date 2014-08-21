@@ -42,3 +42,6 @@ index
 # composer
 /common/lib/vendor
 composer.lock
+
+/upload
+/logs

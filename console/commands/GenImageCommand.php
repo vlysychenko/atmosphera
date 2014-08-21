@@ -3,7 +3,7 @@ class GenImageCommand extends CConsoleCommand
 {
     public function actionIndex() {
         echo "================================================================================\n\r";
-        echo "GRANAT console command: Batch resizing of uploaded photos\n\r";
+        echo "ATMOSPHERA console command: Batch resizing of uploaded photos\n\r";
         echo "================================================================================\n\r";
         
         $fileform = New PhotoFileForm;             //get instance of model

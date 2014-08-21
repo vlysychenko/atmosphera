@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Top Granat</title>
+    <title>Top Atmosphera</title>
     <? Yii::app()->clientScript->registerCSSFile(Yii::app()->request->baseUrl.'/css/login.css');?>
 </head>
 <body>

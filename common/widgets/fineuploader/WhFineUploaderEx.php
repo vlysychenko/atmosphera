@@ -2,7 +2,7 @@
 /* 
     Extended class for WhFineUploader (with one overrided method)))
 */
-//Yii::import('yiiwheels.widgets.fineuploader.WhFineUploader');
+Yii::import('yiiwheels.widgets.fineuploader.WhFineUploader');
 
 class WhFineUploaderEx extends WhFineUploader
 {

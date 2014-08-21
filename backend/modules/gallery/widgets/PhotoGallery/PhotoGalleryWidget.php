@@ -113,7 +113,7 @@ class PhotoGalleryWidget extends CWidget
         $this->fileForm = new FileForm;
         //$this->fileForm = new $this->fileFormClass;
         //$this->widget('application.modules.gallery.widgets.PhotoGallery.WhFineUploaderEx', array(
-        $this->widget('yiiwheels.widgets.fineuploader.WhFineUploaderEx', array(
+        $this->widget('common.widgets.fineuploader.WhFineUploaderEx', array(
                             'uploadAction' => $this->uploadAction,
                             'model' => $this->fileForm,
                             'uniqueId' => $this->uniqueId,

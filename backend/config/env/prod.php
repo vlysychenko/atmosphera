@@ -23,5 +23,19 @@ return array(
 		'yii.debug' => false,
 		'yii.traceLevel' => 0,
 		'yii.handleErrors' => APP_CONFIG_NAME !== 'test',
+                'upload' => array(
+            'magazine' => array(
+                'allowedExtensions' => array('pdf','zip'),
+                'maxFileSize' => 20*1024*1024,
+            ),
+            'image' => array(
+                'allowedExtensions' => array('jpg','jpeg','png','gif'),
+                'maxFileSize' => 2*1024*1024,
+            ),
+        ),
+        'sizeW' => 655,
+        'sizeH' => 365,
+        'thumb_sizeW' => 370,
+        'thumb_sizeH' => 252,
 	)
 );

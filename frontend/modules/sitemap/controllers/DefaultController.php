@@ -13,7 +13,7 @@
         const NEVER = 'never';
         
         private $arrSQL = array(
-            'articles' => 'SELECT n.post_id, p.`title` AS p_title, n.`publication_date`, u.`firstname`, u.`lastname`, n.anounce, n.content FROM news AS n
+            'blogs' => 'SELECT n.post_id, p.`title` AS p_title, n.`publication_date`, u.`firstname`, u.`lastname`, n.anounce, n.content FROM news AS n
                                                         LEFT JOIN users AS u ON u.`user_id` = n.`user_id`
                                                         LEFT JOIN posting AS p ON p.`post_id` = n.`post_id`
                                                         WHERE p.is_active = 1 AND n.`publication_date` <= NOW()
@@ -36,7 +36,7 @@
             $this->addUrl(Yii::app()->createAbsoluteUrl('/'));
             foreach(Yii::app()->modules as $module => $val){
                 switch($module){
-                    case 'articles':                    
+                    case 'blogs':                    
                     case 'gallery':
                         $ids = Yii::app()->db->createCommand($this->arrSQL[$module])->queryAll();
                         if(is_array($ids)){

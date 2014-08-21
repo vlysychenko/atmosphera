@@ -17,7 +17,7 @@
         <?php
         echo '<div style="margin-left: 355px;">';
             $this->widget('bootstrap.widgets.TbHeroUnit', array(
-                'heading' => 'Top Granat',
+                'heading' => 'Top Atmosphera',
                 'content' => Yii::t('main','Admin console').TbHtml::link('Logout', Yii::app()->createAbsoluteUrl('user/logout'), array('color' => TbHtml::BUTTON_COLOR_INVERSE,'class'=>'btn fl-r')),
                 'htmlOptions'=>array('style'=>'width:1080px;')
             ));

@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var config = {
-        siteURL        : 'site:http://top-granat.com',    // Change this to your site
+        siteURL        : 'site:http://top-atmosphera.com',    // Change this to your site
         searchSite    : true,
         type        : 'web',
         append        : false,

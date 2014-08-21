@@ -31,11 +31,11 @@
                     else 
                         echo CHtml::tag('h1', array('class'=>'logo'), '', true);
                 ?>            
-                <!--<h1 class="logo">Top Granat</h1>-->
+                <!--<h1 class="logo">Top Atmosphera</h1>-->
                 <div class="main-nav">
                     <ul>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('about')?>"><?=Yii::t('main','about us')?></a></li>
-                        <li><a href="<?=Yii::app()->createAbsoluteUrl('articles')?>"><?=Yii::t('main','articles')?></a></li>
+                        <li><a href="<?=Yii::app()->createAbsoluteUrl('blogs')?>"><?=Yii::t('main','blogs')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('gallery')?>"><?=Yii::t('main','gallery')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('partners')?>"><?=Yii::t('main','partners')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('contacts')?>"><?=Yii::t('main','contacts')?></a></li>

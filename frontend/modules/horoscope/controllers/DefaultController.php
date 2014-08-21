@@ -2,9 +2,9 @@
 
 class DefaultController extends FrontendController
 {
-    public $meta_keywords= 'Гороскоп, Granat';
-    public $meta_description='Гороскоп | Granat';
-    public $meta_title='Гороскоп | Granat';
+    public $meta_keywords= 'Гороскоп, Atmosphera';
+    public $meta_description='Гороскоп | Atmosphera';
+    public $meta_title='Гороскоп | Atmosphera';
 
     public function actionIndex()
 	{

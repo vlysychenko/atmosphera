@@ -17,18 +17,21 @@ return array(
 	),
 	'components' => array(
 //		change to suit your needs
-//		'db' => array(
-//			'connectionString' => '{DB_CONNECTION}',
-//			'username' => '{DB_USER}',
-//			'password' => '{DB_PASSWORD}',
-//			'enableProfiling' => true,
-//			'enableParamLogging' => true,
-//			'charset' => 'utf8',
-//		),
+		'db' => array(
+			'connectionString' => 'mysql:host=localhost;port=3306;dbname=atmosphera',
+			'username' => 'root',
+			'password' => '',
+			'enableProfiling' => true,
+			'enableParamLogging' => true,
+			'charset' => 'utf8',
+		),
 	),
 	'params' => array(
 		'yii.handleErrors' => true,
 		'yii.debug' => true,
 		'yii.traceLevel' => 3,
+        'uploadDir' => dirname(__FILE__) . '/../..' . '/upload',
+        'uploadUrl' => '/upload',
+        'defaultPhoto' => '/upload/nophoto.jpg',
 	)
 );

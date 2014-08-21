@@ -26,9 +26,24 @@ return array(
 //			'charset' => 'utf8',
 //		),
 	),
-	'params' => array(
-		'yii.handleErrors' => true,
-		'yii.debug' => true,
-		'yii.traceLevel' => 3,
-	)
+ 'params' => array(
+  'yii.handleErrors' => true,
+  'yii.debug' => true,
+  'yii.traceLevel' => 3,
+        
+        'upload' => array(
+            'magazine' => array(
+                'allowedExtensions' => array('pdf','zip'),
+                'maxFileSize' => 20*1024*1024,
+            ),
+            'image' => array(
+                'allowedExtensions' => array('jpg','jpeg','png','gif'),
+                'maxFileSize' => 2*1024*1024,
+            ),
+        ),
+        'sizeW' => 655,
+        'sizeH' => 365,
+        'thumb_sizeW' => 370,
+        'thumb_sizeH' => 252,
+ )
 );

@@ -32,7 +32,7 @@ return array(
 	),
 	'components' => array(
 		'db'=>array(
-            'connectionString' => 'mysql:host=localhost;port=3307;dbname=granat',
+            'connectionString' => 'mysql:host=localhost;port=3307;dbname=atmosphera',
             'username' => 'root',
             'password' => '',
             'enableProfiling' => false,

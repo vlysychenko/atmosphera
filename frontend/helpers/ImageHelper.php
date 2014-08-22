@@ -2,6 +2,7 @@
 class ImageHelper{
 
     public static function imageUrl($path,$file){
+        //debugbreak();
         $uploadDir = rtrim(preg_replace("#[\\/]#", DIRECTORY_SEPARATOR, Yii::app()->params['uploadDir']), DIRECTORY_SEPARATOR);
         $realpath = strlen($path) ? $uploadDir. DIRECTORY_SEPARATOR. $path . DIRECTORY_SEPARATOR. $file 
                                   : $uploadDir. DIRECTORY_SEPARATOR. $file ;

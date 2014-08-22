@@ -8,10 +8,10 @@ class WhFineUploaderEx extends WhFineUploader
 {
     //special params for widget
     public $uniqueId;
-    public $photoCount = 0;  //count of exists photo (or 0 if new gallery)
+    public $photoCount = 0;  //count of exists photo (or 0 if new portfolio)
     public $photoCountMax = 0;  //max count of uploaded photo (0 - without limit)
     public $maxSortOrder = 0;
-    public $galleryType;
+    public $portfolioType;
   
     //--- Overrided method: Registers required client script for fineuploader
     public function registerClientScript()
@@ -42,7 +42,7 @@ class WhFineUploaderEx extends WhFineUploader
                  var photoCount =  " . $this->photoCount . ";
                  var photoCountMax =  " . $this->photoCountMax . ";
                  var maxSortOrder =  " . $this->maxSortOrder . ";
-                 var galleryType =  " . $this->galleryType . ";
+                 var portfolioType =  " . $this->portfolioType . ";
                  var uploader_" . $this->uniqueId . " = new qq.FineUploader(" . $options .");
                  
                  $('$selector .triggerUpload').click(function() {

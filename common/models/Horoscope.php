@@ -116,22 +116,22 @@ class Horoscope extends CActiveRecord
     public function saveHoroscope(&$galleries){
         $isErrorsHoroscope = false;
         $isErrorsPost = false;
-        $isErrorsGallery = false;        
+        $isErrorsPortfolio = false;        
         $isGalSaved = false;
         $isHorSaved = false;
         $isPostSaved = false;
         
         $isErrorsHoroscope = !$this->validate();
         $isErrorsPost = !$this->post->validate();
-        $isErrorsGallery = PhotoGalleryWidget::checkForErrors($galleries);
+        $isErrorsPortfolio = PhotoPortfolioWidget::checkForErrors($galleries);
         
-        if(!$isErrorsGallery && !$isErrorsHoroscope && !$isErrorsPost){
+        if(!$isErrorsPortfolio && !$isErrorsHoroscope && !$isErrorsPost){
             $transaction = Yii::app()->db->beginTransaction();
             
-            //saving gallery
+            //saving portfolio
             if(is_array($galleries)){
-                foreach($galleries as $gallery){
-                    $isGalSaved = $gallery->saveGallery();
+                foreach($galleries as $portfolio){
+                    $isGalSaved = $portfolio->savePortfolio();
                     break;
                 }
                 $this->post->gallery_id = $gallery->gallery_id;

@@ -17,7 +17,7 @@
 )); ?>
 
 
-	<?php echo $form->errorSummary(array($model, $gallery)); ?>
+	<?php echo $form->errorSummary(array($model, $portfolio)); ?>
     
     <div class="control-group">
         <?php echo TbHtml::activeLabelEx($model, 'publication_date', array(
@@ -71,16 +71,16 @@
     </div> 
     
     <div class="control-group">
-        <?php echo TbHtml::activeLabelEx($model, Yii::t('main', 'Gallery'), array(
-            'for'=>'Posting_gallery',
+        <?php echo TbHtml::activeLabelEx($model, Yii::t('main', 'Portfolio'), array(
+            'for'=>'Posting_portfolio',
             'class'=>'control-label',
         )); ?>
         <div class="controls">
             <?
-            $this->widget('application.modules.gallery.widgets.PhotoGallery.PhotoGalleryWidget', array(
-                'gallery' => $gallery,
-                'galleryType' => 1,
-                'uploadAction' => Yii::app()->createUrl('gallery/default/uploadMagazine'),
+            $this->widget('application.modules.portfolio.widgets.PhotoPortfolio.PhotoPortfolioWidget', array(
+                'portfolio' => $portfolio,
+                'portfolioType' => 1,
+                'uploadAction' => Yii::app()->createUrl('portfolio/default/uploadMagazine'),
                 'photoCountMax' => 1,
                 'checkBoxClass' => 'hide',
                 'radiobuttonClass' => 'hide',

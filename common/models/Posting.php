@@ -14,7 +14,7 @@
  *
  * The followings are the available model relations:
  * @property News $news
- * @property Gallery $gallery
+ * @property Portfolio $portfolio
  */
 class Posting extends CActiveRecord
 {
@@ -22,11 +22,11 @@ class Posting extends CActiveRecord
     const SWITCH_OFF = 0;
     const POST_TYPE_UNKNOWN   = 0;
     const POST_TYPE_NEWS      = 1;
-    const POST_TYPE_GALLERY   = 2;
+    const POST_TYPE_PORTFOLIO = 2;
     const POST_TYPE_HOROSCOPE = 3;
 
-    private $batchGalleryIds = array();
-    private $savedGalleryId;
+    private $batchPortfolioIds = array();
+    private $savedPortfolioId;
      
     public $postedTags = array();
     public $deletedTags = array();
@@ -46,7 +46,7 @@ class Posting extends CActiveRecord
     public static function typePosts() {
         return array(
             array('id' => self::POST_TYPE_NEWS, 'post_type' => Yii::t('main','News')),
-            array('id' => self::POST_TYPE_GALLERY, 'post_type' => Yii::t('main','Gallery')),
+            array('id' => self::POST_TYPE_PORTFOLIO, 'post_type' => Yii::t('main','Portfolio')),
         );
     }
 
@@ -78,9 +78,9 @@ class Posting extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'news' => array(self::HAS_ONE, 'News', 'post_id'),
-			'gallery' => array(self::BELONGS_TO, 'Gallery', 'gallery_id'),
-			'galleryposts' => array(self::HAS_ONE, 'GalleryPosts', 'post_id'),
-            //'relgallery' => array(self::HAS_ONE, 'Gallery', 'gallery_id'),
+			'portfolio' => array(self::BELONGS_TO, 'Portfolio', 'gallery_id'),
+			'portfolioposts' => array(self::HAS_ONE, 'PortfolioPosts', 'post_id'),
+            //'relportfolio' => array(self::HAS_ONE, 'Portfolio', 'gallery_id'),
             'tags' => array(self::MANY_MANY, 'Tag', 'tagpost(post_id, tag_id)'),
             'tagposts'=>array(self::HAS_MANY, 'Tagpost', 'post_id'),
 		);
@@ -94,7 +94,7 @@ class Posting extends CActiveRecord
                  'class' => 'common.extensions.behaviors.DeletableBehavior',
                  'relations' => array(
                      'tagposts' => DeletableBehavior::CASCADE,
-                     //'gallery' => DeletableBehavior::CASCADE,
+                     //'portfolio' => DeletableBehavior::CASCADE,
                      //'news' => DeletableBehavior::CASCADE,
                  )
              )
@@ -112,7 +112,7 @@ class Posting extends CActiveRecord
 
     //function after delete posting record
     public function afterDelete() {//DebugBreak();
-        Gallery::model()->batchDelete(array($this->gallery_id));   //deleting via DeletableBehavior
+        Portfolio::model()->batchDelete(array($this->gallery_id));   //deleting via DeletableBehavior
         return parent::afterDelete();  //run parent event handler
     }
       
@@ -128,9 +128,9 @@ class Posting extends CActiveRecord
 			'post_type' => Yii::t('main', 'Post Type'),
 			'created_date' => Yii::t('main', 'Created Date'),
 			'is_active' => Yii::t('main', 'Is Active'),
-			'gallery_id' => Yii::t('main', 'Gallery'),
+			'gallery_id' => Yii::t('main', 'Portfolio'),
             'tagList' => Yii::t('main', 'Tag List'),
-            'gallery' => Yii::t('main', 'Gallery'),
+            'portfolio' => Yii::t('main', 'Portfolio'),
 		);
 	}
 

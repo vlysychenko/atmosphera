@@ -47,8 +47,8 @@ return array(
         'contacts' => array(
 //            'class' => 'frontend.modules.contacts.ContactsModule',
         ),
-        'gallery' => array(
-//            'class' => 'frontend.modules.gallery.GalleryModule',
+        'portfolio' => array(
+//            'class' => 'frontend.modules.portfolio.PortfolioModule',
         ),
         'partners' => array(
 //            'class' => 'frontend.modules.partners.PartnersModule',

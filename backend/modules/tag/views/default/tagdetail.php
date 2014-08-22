@@ -65,7 +65,7 @@ $this->widget('bootstrap.widgets.TbGridView', array(
             'type'=>'raw',
             'filter'=>CHtml::listData($model->typePosts(), 'id', 'post_type'),
             'htmlOptions'=>array('style'=>'width: 250px'),
-            'value'=>'$data->post_type == 1 ? Yii::t("main","News") : Yii::t("main","Gallery")',
+            'value'=>'$data->post_type == 1 ? Yii::t("main","News") : Yii::t("main","Portfolio")',
         ),
         array(
             'name'=>'publication_date',

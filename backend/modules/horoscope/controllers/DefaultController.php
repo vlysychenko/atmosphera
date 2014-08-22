@@ -11,8 +11,8 @@ class DefaultController extends BackendController
      */
     public function actionUpdate($id)
     {
-        $model = Horoscope::model()->with(array('post' => array('with' => array('gallery' => array('with' => 'photos')))))->findByPk($id);
-        $gallery = $model->post->gallery;
+        $model = Horoscope::model()->with(array('post' => array('with' => array('portfolio' => array('with' => 'photos')))))->findByPk($id);
+        $portfolio = $model->post->portfolio;
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
@@ -20,9 +20,9 @@ class DefaultController extends BackendController
         {
             $model->attributes=$_POST['Horoscope'];
             if(empty($_POST['Horoscope']['publication_date'])) $model->publication_date = Yii::app()->dateFormatter->format('yyyy-MM-dd hh:mm:ss', time());
-            Yii::import('application.modules.gallery.widgets.PhotoGallery.PhotoGalleryWidget');
-            $galleryWidget = New PhotoGalleryWidget;
-            $galleries = $galleryWidget->validateGallery($_POST);
+            Yii::import('application.modules.portfolio.widgets.PhotoPortfolio.PhotoPortfolioWidget');
+            $portfolioWidget = New PhotoPortfolioWidget;
+            $galleries = $portfolioWidget->validatePortfolio($_POST);
             
             if($model->saveHoroscope($galleries)){
                 $strMessage = Yii::t('main','Horoscope was saved successfully');
@@ -30,12 +30,12 @@ class DefaultController extends BackendController
                 Yii::app()->request->redirect(Yii::app()->createAbsoluteUrl('/horoscope/default/index'));
                 Yii::app()->end();
             }else{
-                $gallery = $galleries[0];  //returns gallery with errors to form
+                $portfolio = $galleries[0];  //returns portfolio with errors to form
             }
         }
-        if(empty($gallery)) $gallery = new Gallery();
+        if(empty($portfolio)) $portfolio = new Portfolio();
         $this->render('update',array(
-            'model'=>$model,'gallery' => $gallery
+            'model'=>$model,'portfolio' => $portfolio
         ));
     }
 

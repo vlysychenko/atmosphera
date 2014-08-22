@@ -30,11 +30,11 @@ return array(
 
     'import' => array(
         'yiiwheels.widgets.fineuploader.*',
-        'application.widgets.PhotoGallery.*', 
+        'application.widgets.PhotoPortfolio.*', 
         //'application.extensions.deletable-behavior.DeletableBehavior', 
         'common.extensions.behaviors.*',   //it's very good for auto import for new behaviors
         'application.components.*',
-        'application.modules.gallery.models.*',
+        'application.modules.portfolio.models.*',
         'application.models.*',
         'backend.modules.user.models.*',
     ),
@@ -72,8 +72,8 @@ return array(
             'tableProfiles' => 'profiles',
             'tableProfileFields' => 'profiles_fields',
         ),
-        'gallery' => array(
-            'class' => 'backend.modules.gallery.GalleryModule',
+        'portfolio' => array(
+            'class' => 'backend.modules.portfolio.PortfolioModule',
         ),
         'magazine' => array(
             'class' => 'backend.modules.magazine.MagazineModule',
@@ -84,8 +84,8 @@ return array(
         'tag' => array(
             'class' => 'backend.modules.tag.TagModule',
         ),
-        'galleryposts' => array(
-            'class' => 'backend.modules.galleryposts.GalleryPostsModule',
+        'portfolioposts' => array(
+            'class' => 'backend.modules.portfolioposts.PortfolioPostsModule',
         ),
         'partners' => array(
             'class' => 'backend.modules.partners.PartnersModule',

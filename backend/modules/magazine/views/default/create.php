@@ -25,7 +25,7 @@ for($i = 1; $i <=12; $i++){
 }
 ?>
 
-<?php echo $form->errorSummary(array($model, $gallery), null, null, array('class' => 'alert-error')); ?>
+<?php echo $form->errorSummary(array($model, $portfolio), null, null, array('class' => 'alert-error')); ?>
 
         <div class="control-group">
             <?php echo TbHtml::activeLabelEx($model,'title', array('class'=>'control-label')); ?>
@@ -54,7 +54,7 @@ for($i = 1; $i <=12; $i++){
     
     <div class="control-group">
         <?php echo TbHtml::activeLabelEx($model, Yii::t('main', 'Magazine'), array(
-            'for'=>'Posting_gallery',
+            'for'=>'Posting_portfolio',
             'class'=>'control-label',
         )); ?>
         <div class="controls">
@@ -96,16 +96,16 @@ for($i = 1; $i <=12; $i++){
         </div>
     </div>
     <div class="control-group">
-        <?php echo TbHtml::activeLabelEx($model, Yii::t('main', 'Gallery'), array(
-            'for'=>'Posting_gallery',
+        <?php echo TbHtml::activeLabelEx($model, Yii::t('main', 'Portfolio'), array(
+            'for'=>'Posting_portfolio',
             'class'=>'control-label',
         )); ?>
         <div class="controls">
 <?    
-    $this->widget('application.modules.gallery.widgets.PhotoGallery.PhotoGalleryWidget', array(
-        'gallery' => $gallery,
-        'galleryType' => 1,
-        'uploadAction' => Yii::app()->createUrl('gallery/default/uploadMagazine'),
+    $this->widget('application.modules.portfolio.widgets.PhotoPortfolio.PhotoPortfolioWidget', array(
+        'portfolio' => $portfolio,
+        'portfolioType' => 1,
+        'uploadAction' => Yii::app()->createUrl('portfolio/default/uploadMagazine'),
         'photoCountMax' => 1,
         'checkBoxClass' => 'hide',
         'radiobuttonClass' => 'hide',

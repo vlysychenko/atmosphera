@@ -15,7 +15,7 @@
  * @property integer $is_top
  *
  * The followings are the available model relations:
- * @property Gallery $gallery
+ * @property Portfolio $portfolio
  */
 class Photo extends CActiveRecord
 {
@@ -64,7 +64,7 @@ class Photo extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'gallery' => array(self::BELONGS_TO, 'Gallery', 'gallery_id'),
+			'portfolio' => array(self::BELONGS_TO, 'Portfolio', 'gallery_id'),
 		);
 	}
 

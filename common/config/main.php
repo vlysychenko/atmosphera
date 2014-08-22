@@ -99,7 +99,7 @@ return array(
                 ),*/
                 //model with default settings
                 'News',
-                'GalleryPosts',
+                'PortfolioPosts',
             ),
             //config for user models, which is used in application
             'userConfig'=>array(

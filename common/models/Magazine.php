@@ -10,7 +10,7 @@
  * @property integer $is_shown
  *
  * The followings are the available model relations:
- * @property Gallery $gallery
+ * @property Portfolio $portfolio
  */
 class Magazine extends CActiveRecord
 {   
@@ -59,7 +59,7 @@ class Magazine extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'gallery' => array(self::BELONGS_TO, 'Gallery', 'gallery_id'),
+			'portfolio' => array(self::BELONGS_TO, 'Portfolio', 'gallery_id'),
 		);
 	}
 
@@ -73,7 +73,7 @@ class Magazine extends CActiveRecord
             'title' => Yii::t('main', 'Title'),
             'publication_year' => Yii::t('main', 'Year'),
             'publication_month' => Yii::t('main', 'Month'),
-			'gallery_id' => Yii::t('main', 'Gallery'),
+			'gallery_id' => Yii::t('main', 'Portfolio'),
 			'filename' => Yii::t('main', 'Filename'),
 			'is_shown' => Yii::t('main', 'Shown'),
 		);
@@ -139,23 +139,23 @@ class Magazine extends CActiveRecord
     */
     public function saveMagazine(&$galleries){
         $isErrorsMagazine = false;
-        $isErrorsGallery = false;        
+        $isErrorsPortfolio = false;        
         $isGalSaved = false;
         $isMagSaved = false;
         
         $isErrorsMagazine = !$this->validate();
-        $isErrorsGallery = PhotoGalleryWidget::checkForErrors($galleries);
+        $isErrorsPortfolio = PhotoPortfolioWidget::checkForErrors($galleries);
         
-        if(!$isErrorsGallery && !$isErrorsMagazine){
+        if(!$isErrorsPortfolio && !$isErrorsMagazine){
             $transaction = Yii::app()->db->beginTransaction();
             
-            //saving gallery
+            //saving portfolio
             if(is_array($galleries)){
-                foreach($galleries as $gallery){
-                    $isGalSaved = $gallery->saveGallery();
+                foreach($galleries as $portfolio){
+                    $isGalSaved = $portfolio->savePortfolio();
                     break;
                 }
-                $this->gallery_id = $gallery->gallery_id;
+                $this->gallery_id = $portfolio->gallery_id;
                 $isMagSaved = $this->save(false);
             }
             

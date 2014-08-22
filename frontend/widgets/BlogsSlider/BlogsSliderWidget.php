@@ -26,8 +26,8 @@ class BlogsSliderWidget extends CWidget
     
     private function getImagesFilename(){
         foreach($this->sliderData as &$row){
-            $galleryId = $row['gallery_id'];
-            $row['filename'] = Yii::app()->db->createCommand('SELECT filename FROM photo WHERE gallery_id = :id AND is_top = 1')->queryScalar(array(':id' => $galleryId));            
+            $portfolioId = $row['gallery_id'];
+            $row['filename'] = Yii::app()->db->createCommand('SELECT filename FROM photo WHERE gallery_id = :id AND is_top = 1')->queryScalar(array(':id' => $portfolioId));            
         }
     }
 }

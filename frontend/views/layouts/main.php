@@ -42,7 +42,7 @@
                 </div>
                 <span></span>                
                      <ul class="menu">
-                        <li><a href="<?=Yii::app()->createAbsoluteUrl('gallery')?>"><?=Yii::t('main','gallery')?></a></li>
+                        <li><a href="<?=Yii::app()->createAbsoluteUrl('gallery')?>"><?=Yii::t('main','portfolio')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('partners')?>"><?=Yii::t('main','partners')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('about')?>"><?=Yii::t('main','about us')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('blogs')?>"><?=Yii::t('main','blogs')?></a></li>
@@ -63,7 +63,7 @@
             <?
               $this->widget('frontend.extensions.bxslider.BxSlider',array(
               'slides'=> $this->preparePartnerSlides(),
-              'id' => 'partners-gallery-slider',
+              'id' => 'partners-portfolio-slider',
               'htmlOptions' => array('class' => 'slider-article'),
               'sliderOptions'=> array('pager' => false,
                             'slideWidth' => 125,

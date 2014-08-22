@@ -6,7 +6,7 @@
 <?php endif; ?>
 <div class="container">
     <div class="login">
-    <h1><?=Yii::t('main','Login to Top Atmosphera')?></h1>
+    <h1><?=Yii::t('main','Login to Atmosphera')?></h1>
     <?php echo CHtml::beginForm(Yii::app()->getModule('user')->loginUrl,'post',array('class'=>'clearfix')); ?>
     <p><?php echo CHtml::activeTextField($model,'email',array('size'=>30,'placeholder'=>Yii::t('main','E-mail'))) ?></p>
         <? echo CHtml::error($model,'email');?>

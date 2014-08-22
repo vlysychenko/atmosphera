@@ -9,6 +9,6 @@
     }
     echo "<img alt='".$data['title']."' title='".$data['title']."' src='".$imgUrl."'>";
 ?>
-        <p>журнал «Top Atmosphera»<br><?="$month, $year г."?></p>
+        <p>журнал «Atmosphera»<br><?="$month, $year г."?></p>
         <a class="button" target="helperFrame" href="<?php if($magazine) echo Yii::app()->createAbsoluteUrl('blogs/default/downloadFile',array('filename'=>$magazine)) ; else echo '#';?>">скачать</a>
         <iframe style="display: none;" name="helperFrame"></iframe>

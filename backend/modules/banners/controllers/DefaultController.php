@@ -73,7 +73,7 @@ class DefaultController extends Controller
         {
             $model->attributes = $_POST['Banners'];
             Yii::import('application.modules.portfolio.widgets.PhotoPortfolio.PhotoPortfolioWidget');
-            $portfolioWidget = New PhotoGalleryWidget;
+            $portfolioWidget = New PhotoPortfolioWidget;
             $galleries = $portfolioWidget->validatePortfolio($_POST);
             
             if($model->saveBanners($galleries)){

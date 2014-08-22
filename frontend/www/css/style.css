@@ -105,7 +105,7 @@ img { max-width: 100%; height: auto; }
 .album-list li a > span .album-title { display: block; font-size: 24px; }
 .album-list li a > span p { margin: 10px 0; }
 .album-list li a > span .album-date { font-size: 9px; }
-.album-list li a:before { content: ''; display: block; position: absolute; top: 90px; bottom: 0; left: 0; right: 0; z-index: 1; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, #DCDCDC)); background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), #DCDCDC); background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.1), #DCDCDC); background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), #DCDCDC); background-image: linear-gradient(rgba(255, 255, 255, 0.1), #DCDCDC); }
+.album-list li a:before { content: ''; display: block; position: absolute; top: 90px; bottom: 0; left: 0; right: 0; z-index: 1; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 250, 240, 0.1)), color-stop(100%, #DCDCDC)); background-image: -webkit-linear-gradient(rgba(255, 250, 240, 0.1), #DCDCDC); background-image: -moz-linear-gradient(rgba(255, 250, 240, 0.1), #DCDCDC); background-image: -o-linear-gradient(rgba(255, 250, 240, 0.1), #DCDCDC); background-image: linear-gradient(rgba(255, 250, 240, 0.1), #DCDCDC); }
 .album-list.article-album { margin-bottom: 10px; }
 .album-list.article-album li a > span .album-title { font-size: 20px; }
 .album-list.article-album li a > span .album-date { display: block; margin-top: 10px; }

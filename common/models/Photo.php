@@ -75,7 +75,7 @@ class Photo extends CActiveRecord
 	{
 		return array(
 			'photo_id' => Yii::t('main', 'Photo'),
-			'gallery_id' => Yii::t('main', 'Gallery'),
+			'gallery_id' => Yii::t('main', 'Portfolio'),
 			'title' => Yii::t('main', 'Title'),
 			'filename' => Yii::t('main', 'Filename'),
 			'thumb_filename' => Yii::t('main', 'Thumb') . ' ' . Yii::t('main', 'Filename'),

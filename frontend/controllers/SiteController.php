@@ -51,7 +51,7 @@ class SiteController extends FrontendController
             $slides[] = array(
                 'url' => ImageHelper::imageUrl('main_page_slider', $slide['filename']),
                 'content' => sprintf('<a href=\'%s\'><img src=\'%s\' alt=\'%s\' title=\'%s\'></img></a>' , 
-                                Yii::app()->createAbsoluteUrl('gallery/default/view', array('id' => $slide['post_id'])), 
+                                Yii::app()->createAbsoluteUrl('portfolio/default/view', array('id' => $slide['post_id'])), 
                                 ImageHelper::imageUrl('main_page_slider', $slide['filename']), 
                                 ContentHelper::prepareStr($slide['photo_description']), 
                                 ContentHelper::prepareStr($slide['photo_description'])

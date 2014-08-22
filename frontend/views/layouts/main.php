@@ -42,7 +42,7 @@
                 </div>
                 <span></span>                
                      <ul class="menu">
-                        <li><a href="<?=Yii::app()->createAbsoluteUrl('gallery')?>"><?=Yii::t('main','portfolio')?></a></li>
+                        <li><a href="<?=Yii::app()->createAbsoluteUrl('portfolio')?>"><?=Yii::t('main','portfolio')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('partners')?>"><?=Yii::t('main','partners')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('about')?>"><?=Yii::t('main','about us')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('blogs')?>"><?=Yii::t('main','blogs')?></a></li>

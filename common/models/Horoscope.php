@@ -134,7 +134,7 @@ class Horoscope extends CActiveRecord
                     $isGalSaved = $portfolio->savePortfolio();
                     break;
                 }
-                $this->post->gallery_id = $gallery->gallery_id;
+                $this->post->gallery_id = $portfolio->gallery_id;
                 $isPostSaved = $this->post->save(false);
                 $isHorSaved = $this->save(false);
             }

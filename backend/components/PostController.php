@@ -150,7 +150,7 @@ class PostController extends BackendController
             
             if ($success) {
                 $transaction = Yii::app()->db->beginTransaction();
-                if ($success = $portfolio->saveGallery()) {
+                if ($success = $portfolio->savePortfolio()) {
                     $post->gallery_id = $portfolio->gallery_id;
                     if ($success = $post->save()) {
                         $news->post_id = $post->post_id;

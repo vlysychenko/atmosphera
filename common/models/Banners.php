@@ -11,7 +11,7 @@
  * @property integer $is_active
  *
  * The followings are the available model relations:
- * @property Gallery $gallery
+ * @property Portfolio $portfolio
  */
 class Banners extends CActiveRecord
 {
@@ -60,7 +60,7 @@ class Banners extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'gallery' => array(self::BELONGS_TO, 'Gallery', 'gallery_id'),
+			'portfolio' => array(self::BELONGS_TO, 'Portfolio', 'gallery_id'),
 		);
 	}
 
@@ -73,7 +73,7 @@ class Banners extends CActiveRecord
 			'banner_id' => Yii::t('main', 'Banner'),
 			'title' => Yii::t('main', 'Title'),
 			'link' => Yii::t('main', 'Link'),
-			'gallery_id' => Yii::t('main', 'Gallery'),
+			'gallery_id' => Yii::t('main', 'Portfolio'),
 			'is_active' => Yii::t('main', 'Is Active'),
 		);
 	}
@@ -101,23 +101,23 @@ class Banners extends CActiveRecord
 	}
     public function saveBanners(&$galleries){
         $isErrorsBanners = false;
-        $isErrorsGallery = false;        
+        $isErrorsPortfolio = false;        
         $isGalSaved = false;
         $isBanSaved = false;
         
         $isErrorsBanners = !$this->validate();
-        $isErrorsGallery = PhotoGalleryWidget::checkForErrors($galleries);
+        $isErrorsPortfolio = PhotoPortfolioWidget::checkForErrors($galleries);
         
-        if(!$isErrorsGallery && !$isErrorsBanners){
+        if(!$isErrorsPortfolio && !$isErrorsBanners){
             $transaction = Yii::app()->db->beginTransaction();
             
-            //saving gallery
+            //saving portfolio
             if(is_array($galleries)){
-                foreach($galleries as $gallery){
-                    $isGalSaved = $gallery->saveGallery();
+                foreach($galleries as $portfolio){
+                    $isGalSaved = $portfolio->savePortfolio();
                     break;
                 }
-                $this->gallery_id = $gallery->gallery_id;
+                $this->gallery_id = $portfolio->gallery_id;
                 $isBanSaved = $this->save(false);
             }
             

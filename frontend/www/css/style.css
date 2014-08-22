@@ -96,16 +96,16 @@ img { max-width: 100%; height: auto; }
 .pagination li a:hover { text-decoration: underline; }
 .pagination li:first-child { border-left: none; }
 
-/*  ==============    Album lists in gallery    ========================================*/
+/*  ==============    Album lists in portfolio    ========================================*/
 .album-list { list-style: none; margin-left: -10px; margin-bottom: 50px; }
 .album-list li { float: left; width: 50%; }
-.album-list li a { display: block; margin-left: 10px; margin-bottom: 10px; text-decoration: none; color: #fff; position: relative; }
+.album-list li a { display: block; margin-left: 10px; margin-bottom: 10px; text-decoration: none; color: #4F4F4F; position: relative; }
 .album-list li a img { display: block; width: 100%; }
 .album-list li a > span { display: block; padding: 0 10px 10px; position: absolute; bottom: 0px; left: 0px; right: 0px; z-index: 2; }
 .album-list li a > span .album-title { display: block; font-size: 24px; }
 .album-list li a > span p { margin: 10px 0; }
 .album-list li a > span .album-date { font-size: 9px; }
-.album-list li a:before { content: ''; display: block; position: absolute; top: 90px; bottom: 0; left: 0; right: 0; z-index: 1; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, #000000)); background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), #000000); background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.1), #000000); background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), #000000); background-image: linear-gradient(rgba(255, 255, 255, 0.1), #000000); }
+.album-list li a:before { content: ''; display: block; position: absolute; top: 90px; bottom: 0; left: 0; right: 0; z-index: 1; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 250, 240, 0.1)), color-stop(100%, #DCDCDC)); background-image: -webkit-linear-gradient(rgba(255, 250, 240, 0.1), #DCDCDC); background-image: -moz-linear-gradient(rgba(255, 250, 240, 0.1), #DCDCDC); background-image: -o-linear-gradient(rgba(255, 250, 240, 0.1), #DCDCDC); background-image: linear-gradient(rgba(255, 250, 240, 0.1), #DCDCDC); }
 .album-list.article-album { margin-bottom: 10px; }
 .album-list.article-album li a > span .album-title { font-size: 20px; }
 .album-list.article-album li a > span .album-date { display: block; margin-top: 10px; }

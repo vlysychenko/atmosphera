@@ -13,7 +13,7 @@
             <a href="<?=yii::app()->createUrl('contacts')?>"><?=Yii::t('main', 'contacts')?></a>
         </li>
         <li>
-            <a href="<?=yii::app()->createUrl('gallery')?>"><?=Yii::t('main', 'gallery')?></a>
+            <a href="<?=yii::app()->createUrl('portfolio')?>"><?=Yii::t('main', 'portfolio')?></a>
         </li>
         <li>
             <a href="<?=yii::app()->createUrl('partners')?>"><?=Yii::t('main', 'partners')?></a>

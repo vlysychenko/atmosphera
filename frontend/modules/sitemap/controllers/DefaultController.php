@@ -18,7 +18,7 @@
                                                         LEFT JOIN posting AS p ON p.`post_id` = n.`post_id`
                                                         WHERE p.is_active = 1 AND n.`publication_date` <= NOW()
                                                         ORDER BY n.`publication_date` DESC',
-            'gallery' => 'SELECT n.post_id, p.title AS p_title, n.publication_date, u.firstname, u.lastname, n.anounce,
+            'portfolio' => 'SELECT n.post_id, p.title AS p_title, n.publication_date, u.firstname, u.lastname, n.anounce,
                                                     (SELECT filename FROM photo WHERE gallery_id = p.gallery_id AND is_top = 1 LIMIT 1) filename
                                                         FROM galleryposts AS n
                                                         LEFT JOIN users AS u ON u.user_id = n.user_id
@@ -37,7 +37,7 @@
             foreach(Yii::app()->modules as $module => $val){
                 switch($module){
                     case 'blogs':                    
-                    case 'gallery':
+                    case 'portfolio':
                         $ids = Yii::app()->db->createCommand($this->arrSQL[$module])->queryAll();
                         if(is_array($ids)){
                             foreach($ids as $id){

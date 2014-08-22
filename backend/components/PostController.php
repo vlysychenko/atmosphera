@@ -114,7 +114,7 @@ class PostController extends BackendController
     */
     public function actionUpdate($id = null)
     {
-        Yii::import('application.modules.gallery.widgets.PhotoGallery.PhotoGalleryWidget');
+        Yii::import('application.modules.portfolio.widgets.PhotoPortfolio.PhotoPortfolioWidget');
         
         $news = $this->loadModel($this->_modelclass, $id);
         $post = isset($news->post) ? $news->post : New Posting();
@@ -124,21 +124,21 @@ class PostController extends BackendController
                 $news->publication_date = CTimestamp::formatDate('Y-m-d H:i:s');
             }
         }
-        $gallery = isset($news->post->gallery) ? $news->post->gallery : New Gallery;
-        $gallery->gallery_type = 1;
+        $portfolio = isset($news->post->portfolio) ? $news->post->portfolio : New Portfolio;
+        $portfolio->gallery_type = 1;
         if(!empty($_POST[$this->_modelclass])){
             $post->attributes = $_POST['Posting'];  //set attributes
             $news->attributes = $_POST[$this->_modelclass];
             $posttitle = $post->title;  //save name of posting to buffer
 
-            $galleryWidget = New PhotoGalleryWidget;
-            $galleries = $galleryWidget->validateGallery($_POST);
+            $portfolioWidget = New PhotoPortfolioWidget;
+            $galleries = $portfolioWidget->validatePortfolio($_POST);
             if (!empty($galleries))
-                $gallery = $galleries[0];
+                $portfolio = $galleries[0];
             
             $post->validate();
             $news->validate();
-            $success = !$post->hasErrors() && !$news->hasErrors() && is_object($gallery) && !$gallery->hasErrors();
+            $success = !$post->hasErrors() && !$news->hasErrors() && is_object($portfolio) && !$portfolio->hasErrors();
             if ($success && isset($post->tags)) { //search for deleted tags
                 foreach($post->tags as $tag)
                     if(!in_array($tag->tag_id, $post->postedTags)) {
@@ -150,8 +150,8 @@ class PostController extends BackendController
             
             if ($success) {
                 $transaction = Yii::app()->db->beginTransaction();
-                if ($success = $gallery->saveGallery()) {
-                    $post->gallery_id = $gallery->gallery_id;
+                if ($success = $portfolio->savePortfolio()) {
+                    $post->gallery_id = $portfolio->gallery_id;
                     if ($success = $post->save()) {
                         $news->post_id = $post->post_id;
                         if ($success = $news->save()){ 
@@ -185,7 +185,7 @@ class PostController extends BackendController
                 
             }
         }
-        $this->render('application.modules.news.views.default.form', array('news' => $news, 'post' => $post, 'gallery' => $gallery));
+        $this->render('application.modules.news.views.default.form', array('news' => $news, 'post' => $post, 'portfolio' => $portfolio));
     }
     
 }

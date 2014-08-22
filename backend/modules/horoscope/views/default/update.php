@@ -9,4 +9,4 @@ $this->widget('bootstrap.widgets.TbBreadcrumb', array(
 ));
 ?>
 
-<?php $this->renderPartial('_form', array('model'=>$model, 'gallery'=>$gallery)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model, 'portfolio'=>$portfolio)); ?>

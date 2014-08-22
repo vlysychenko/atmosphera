@@ -17,7 +17,7 @@
                 <?php foreach($photos as $photo){?>
                     <?php 
                         $description = ContentHelper::cutStringEx($photo['description'], 100);
-                        $imgThumbUrl = ImageHelper::imageUrl('gallery_index_frontend', $photo['filename']);
+                        $imgThumbUrl = ImageHelper::imageUrl('portfolio_index_frontend', $photo['filename']);
                         $imgRawUrl   = ImageHelper::imageUrl('raw', $photo['filename']);
                     ?>
                     <li>

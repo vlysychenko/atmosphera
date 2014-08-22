@@ -57,7 +57,7 @@ $dateFilter = $this->widget('yiiwheels.widgets.datepicker.WhDatePicker', array(
             'htmlOptions'=>array('style'=>'width: 40px'),
             'filterInputOptions'=>array('style'=>'width: 40px'),
             //'header'=>Yii::t('main','ID'), 
-            //'value' => 'CHtml::link(CHtml::encode($data->post_id),array("gallery/default/update","id"=>$data->post_id))',
+            //'value' => 'CHtml::link(CHtml::encode($data->post_id),array("portfolio/default/update","id"=>$data->post_id))',
         ),
         array(
             'name'=>'publication_date',
@@ -173,12 +173,12 @@ $dateFilter = $this->widget('yiiwheels.widgets.datepicker.WhDatePicker', array(
                            )                                          
             );
     
-    if ($modelClass == 'GalleryPosts') {
+    if ($modelClass == 'PortfolioPosts') {
         $columns[] = array(
             'header'=>Yii::t('main','Photos'),//TbHtml::small(Yii::t('main','Photo count')),
             'type'=>'raw',
             'htmlOptions'=>array('style'=>'width: 40px'),
-            'value'=>'$data->post->gallery->photoCount',
+            'value'=>'$data->post->portfolio->photoCount',
         );
     }
     

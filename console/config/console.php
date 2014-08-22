@@ -29,6 +29,6 @@ return array(
 	),
     
     'import' => array(
-        'backend.modules.gallery.models.*',
+        'backend.modules.portfolio.models.*',
     ),
 );

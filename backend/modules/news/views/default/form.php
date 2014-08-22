@@ -32,7 +32,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 ));
 
     //show errors (for all models)
-    echo $form->errorSummary(array($news, $post, $gallery), null, null, array('class' => 'alert-error'));
+    echo $form->errorSummary(array($news, $post, $portfolio), null, null, array('class' => 'alert-error'));
     
     //hidden field for post_type (set by defined controller)
     echo TbHtml::activeHiddenField($post, 'post_type');
@@ -138,16 +138,16 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     </div>   
 
     <div class="control-group">
-        <?php echo TbHtml::activeLabelEx($news, Yii::t('main', 'Gallery'), array(
-            'for'=>'Posting_gallery',
+        <?php echo TbHtml::activeLabelEx($news, Yii::t('main', 'Portfolio'), array(
+            'for'=>'Posting_portfolio',
             'class'=>'control-label',
         )); ?>
         <div class="controls">
-            <?php $this->widget('application.modules.gallery.widgets.PhotoGallery.PhotoGalleryWidget', array(
+            <?php $this->widget('application.modules.portfolio.widgets.PhotoPortfolio.PhotoPortfolioWidget', array(
                     'fileFormClass' => 'PhotoFileForm',
-                    'gallery' => $gallery,
-                    'galleryType' => 1,
-                    'uploadAction' => Yii::app()->createUrl('gallery/default/uploadfile'),
+                    'portfolio' => $portfolio,
+                    'portfolioType' => 1,
+                    'uploadAction' => Yii::app()->createUrl('portfolio/default/uploadfile'),
                     'photoCountMax' => 0,
                     'allowedExtensions' => Yii::app()->params['upload']['image']['allowedExtensions'],//array('gif', 'jpg', 'jpeg', 'png'),
                 ));

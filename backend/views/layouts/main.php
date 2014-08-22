@@ -36,7 +36,7 @@
 //                                array('label' => 'List header'), todo: ??
                                 array('label' => Yii::t('main','Users'),     'icon' => 'user',   'url' =>  Yii::app()->createAbsoluteUrl('user/admin'), 'active' => $controllerId == 'user/admin'),
                                 array('label' => Yii::t('main','News'),      'icon' => 'edit',   'url' => Yii::app()->createAbsoluteUrl('news'), 'active' => $controllerId == 'news/default'),
-                                array('label' => Yii::t('main','Galleries'), 'icon' => 'picture','url' => Yii::app()->createAbsoluteUrl('galleryposts'), 'active' => $controllerId == 'galleryposts/default'),
+                                array('label' => Yii::t('main','Galleries'), 'icon' => 'picture','url' => Yii::app()->createAbsoluteUrl('portfolioposts'), 'active' => $controllerId == 'portfolioposts/default'),
                                 array('label' => Yii::t('main','Comments'),  'icon' => 'pencil', 'url' =>  Yii::app()->createAbsoluteUrl('comments'), 'active' => $controllerId == 'comments/default'),
                                 array('label' => Yii::t('main','Magazines'), 'icon' => 'book',   'url' =>  Yii::app()->createAbsoluteUrl('magazine'), 'active' => $controllerId == 'magazine/default'),
                                 array('label' => Yii::t('main','Tag'),       'icon' => 'tag',    'url' =>  Yii::app()->createAbsoluteUrl('tag'), 'active' => $controllerId == 'tag/default'),

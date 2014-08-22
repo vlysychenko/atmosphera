@@ -17,7 +17,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 //    ),
 ));
     //show errors (for all models)
-echo $form->errorSummary(array($model, $gallery), null, null, array('class' => 'alert-error'));
+echo $form->errorSummary(array($model, $portfolio), null, null, array('class' => 'alert-error'));
 ?>
 
     <fieldset>
@@ -37,15 +37,15 @@ echo $form->errorSummary(array($model, $gallery), null, null, array('class' => '
         </div>
     
         <div class="control-group">
-            <?php echo TbHtml::activeLabelEx($model, Yii::t('main', 'Gallery'), array(
-                'for'=>'Posting_gallery',
+            <?php echo TbHtml::activeLabelEx($model, Yii::t('main', 'Portfolio'), array(
+                'for'=>'Posting_portfolio',
                 'class'=>'control-label',
             )); ?>
             <div class="controls">
-                <?php $this->widget('application.modules.gallery.widgets.PhotoGallery.PhotoGalleryWidget', array(
-                        'gallery' => $gallery,
-                        'galleryType' => 1,
-                        'uploadAction' => Yii::app()->createUrl('gallery/default/uploadMagazine'),
+                <?php $this->widget('application.modules.portfolio.widgets.PhotoPortfolio.PhotoPortfolioWidget', array(
+                        'portfolio' => $portfolio,
+                        'portfolioType' => 1,
+                        'uploadAction' => Yii::app()->createUrl('portfolio/default/uploadMagazine'),
                         'photoCountMax' => 1,
                         'allowedExtensions' => array(
                             'jpg','png','swf','jpeg'

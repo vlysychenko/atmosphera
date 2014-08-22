@@ -4,7 +4,7 @@
 <?
 $this->widget('frontend.extensions.bxslider.BxSlider',array(
     'slides'=> $slides,
-    'id' => 'main-gallery-slider',
+    'id' => 'main-portfolio-slider',
     'htmlOptions' => array(),
     'sliderOptions'=> array('pager' => false,
                             'slideWidth' => 680,

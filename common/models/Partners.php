@@ -58,7 +58,7 @@ class Partners extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
         return array(
-            'gallery' => array(self::BELONGS_TO, 'Gallery', 'gallery_id'),
+            'portfolio' => array(self::BELONGS_TO, 'Portfolio', 'gallery_id'),
         );
 	}
 
@@ -110,28 +110,28 @@ class Partners extends CActiveRecord
     
     public function savePartners(&$galleries){
         $isErrorsPartners = false;
-        $isErrorsGallery = false;     
+        $isErrorsPortfolio = false;     
         $isGalSaved = false;
         $isParSaved = false;
         
         $isErrorsPartners = !$this->validate();
-        $isErrorsGallery = PhotoGalleryWidget::checkForErrors($galleries);
+        $isErrorsPortfolio = PhotoPortfolioWidget::checkForErrors($galleries);
         
-        if(!$isErrorsGallery && !$isErrorsPartners){
+        if(!$isErrorsPortfolio && !$isErrorsPartners){
             $transaction = Yii::app()->db->beginTransaction();
             
-            //saving gallery
+            //saving portfolio
             if(is_array($galleries)){
-                foreach($galleries as &$gallery){
-                    if(count($gallery->photos) != 2){
-                        $gallery->addError('count_photos', Yii::t('main', 'Minimum number of photos is 2'));
+                foreach($galleries as &$portfolio){
+                    if(count($portfolio->photos) != 2){
+                        $portfolio->addError('count_photos', Yii::t('main', 'Minimum number of photos is 2'));
                         $transaction->rollback();
                         return false;
                     }
-                    $isGalSaved = $gallery->saveGallery();
+                    $isGalSaved = $portfolio->savePortfolio();
                     break;
                 }
-                $this->gallery_id = $gallery->gallery_id;
+                $this->gallery_id = $portfolio->gallery_id;
                 $isParSaved = $this->save(false);
             }
             

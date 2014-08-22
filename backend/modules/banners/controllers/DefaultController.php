@@ -37,23 +37,23 @@ class DefaultController extends Controller
     public function actionCreate()
     {
         $model = new Banners();
-        $gallery = new Gallery();
-        $gallery->gallery_type = 2;
+        $portfolio = new Portfolio();
+        $portfolio->gallery_type = 2;
         if(isset($_POST['Banners'])){
             $model->attributes = $_POST['Banners'];
-            Yii::import('application.modules.gallery.widgets.PhotoGallery.PhotoGalleryWidget');
-            $galleryWidget = New PhotoGalleryWidget;
-            $galleries = $galleryWidget->validateGallery($_POST);
+            Yii::import('application.modules.portfolio.widgets.PhotoPortfolio.PhotoPortfolioWidget');
+            $portfolioWidget = New PhotoPortfolioWidget;
+            $galleries = $portfolioWidget->validatePortfolio($_POST);
             
             if($model->saveBanners($galleries)){
                 $strMessage = Yii::t('main','Banners was created successfully');
                 Yii::app()->user->setFlash('success', $strMessage);    //show flash message
                 Yii::app()->request->redirect(Yii::app()->createAbsoluteUrl('/banners/default/index'));
             }else{
-                $gallery = $galleries[0];  //returns gallery with errors to form
+                $portfolio = $galleries[0];  //returns portfolio with errors to form
             }
         }            
-        $this->render('form', array('model' => $model, 'gallery' => $gallery));
+        $this->render('form', array('model' => $model, 'portfolio' => $portfolio));
     }
     
     /**
@@ -63,8 +63,8 @@ class DefaultController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = Banners::model()->with(array('gallery' => array('with' => 'photos')))->findByPk($id);
-        $gallery = $model->gallery;
+        $model = Banners::model()->with(array('portfolio' => array('with' => 'photos')))->findByPk($id);
+        $portfolio = $model->portfolio;
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
@@ -72,21 +72,21 @@ class DefaultController extends Controller
         if(isset($_POST['Banners']))
         {
             $model->attributes = $_POST['Banners'];
-            Yii::import('application.modules.gallery.widgets.PhotoGallery.PhotoGalleryWidget');
-            $galleryWidget = New PhotoGalleryWidget;
-            $galleries = $galleryWidget->validateGallery($_POST);
+            Yii::import('application.modules.portfolio.widgets.PhotoPortfolio.PhotoPortfolioWidget');
+            $portfolioWidget = New PhotoPortfolioWidget;
+            $galleries = $portfolioWidget->validatePortfolio($_POST);
             
             if($model->saveBanners($galleries)){
                 $strMessage = Yii::t('main','Banners was saved successfully');
                 Yii::app()->user->setFlash('success', $strMessage);    //show flash message
                 Yii::app()->request->redirect(Yii::app()->createAbsoluteUrl('/banners/default/index'));
             }else{
-                $gallery = $galleries[0];  //returns gallery with errors to form
+                $portfolio = $galleries[0];  //returns portfolio with errors to form
             }
         }
-        if(empty($gallery)) $gallery = new Gallery();
+        if(empty($portfolio)) $portfolio = new Portfolio();
         $this->render('form',array(
-            'model'=>$model,'gallery' => $gallery
+            'model'=>$model,'portfolio' => $portfolio
         ));
     }
     
@@ -105,7 +105,7 @@ class DefaultController extends Controller
      */
     public function actionDelete($id)
     {
-        $model = Banners::model()->with(array('gallery' => array('with' => 'photos')))->findByPk($id);
+        $model = Banners::model()->with(array('portfolio' => array('with' => 'photos')))->findByPk($id);
         $model->deleteBanners();
 
         // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser

@@ -36,23 +36,23 @@ class DefaultController extends BackendController
     
     public function actionCreate(){
         $model = new Magazine();
-        $gallery = new Gallery();
+        $portfolio = new Portfolio();
         if(isset($_POST['Magazine'])){
             $model->attributes = $_POST['Magazine'];
             if(isset($_POST['magazine-file'])) $model->filename = $_POST['magazine-file'];
-            Yii::import('application.modules.gallery.widgets.PhotoGallery.PhotoGalleryWidget');
-            $galleryWidget = New PhotoGalleryWidget;
-            $galleries = $galleryWidget->validateGallery($_POST);
+            Yii::import('application.modules.portfolio.widgets.PhotoPortfolio.PhotoPortfolioWidget');
+            $portfolioWidget = New PhotoPortfolioWidget;
+            $galleries = $portfolioWidget->validatePortfolio($_POST);
             
             if($model->saveMagazine($galleries)){
                 $strMessage = Yii::t('main','Magazine was created successfully');
                 Yii::app()->user->setFlash('success', $strMessage);    //show flash message
                 Yii::app()->request->redirect(Yii::app()->createAbsoluteUrl('/magazine/default/index'));
             }else{
-                $gallery = $galleries[0];  //returns gallery with errors to form
+                $portfolio = $galleries[0];  //returns portfolio with errors to form
             }
         }            
-        $this->render('create', array('model' => $model, 'gallery' => $gallery));
+        $this->render('create', array('model' => $model, 'portfolio' => $portfolio));
     }
     
     /**
@@ -62,8 +62,8 @@ class DefaultController extends BackendController
      */
     public function actionUpdate($id)
     {
-        $model = Magazine::model()->with(array('gallery' => array('with' => 'photos')))->findByPk($id);
-        $gallery = $model->gallery;
+        $model = Magazine::model()->with(array('portfolio' => array('with' => 'photos')))->findByPk($id);
+        $portfolio = $model->portfolio;
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
@@ -72,21 +72,21 @@ class DefaultController extends BackendController
         {
             $model->attributes = $_POST['Magazine'];
             if(isset($_POST['magazine-file'])) $model->filename = $_POST['magazine-file'];
-            Yii::import('application.modules.gallery.widgets.PhotoGallery.PhotoGalleryWidget');
-            $galleryWidget = New PhotoGalleryWidget;
-            $galleries = $galleryWidget->validateGallery($_POST);
+            Yii::import('application.modules.portfolio.widgets.PhotoPortfolio.PhotoPortfolioWidget');
+            $portfolioWidget = New PhotoPortfolioWidget;
+            $galleries = $portfolioWidget->validatePortfolio($_POST);
             
             if($model->saveMagazine($galleries)){
                 $strMessage = Yii::t('main','Magazine was saved successfully');
                 Yii::app()->user->setFlash('success', $strMessage);    //show flash message
                 Yii::app()->request->redirect(Yii::app()->createAbsoluteUrl('/magazine/default/index'));
             }else{
-                $gallery = $galleries[0];  //returns gallery with errors to form
+                $portfolio = $galleries[0];  //returns portfolio with errors to form
             }
         }
-        if(empty($gallery)) $gallery = new Gallery();
+        if(empty($portfolio)) $portfolio = new Portfolio();
         $this->render('create',array(
-            'model'=>$model,'gallery' => $gallery
+            'model'=>$model,'portfolio' => $portfolio
         ));
     }
     
@@ -122,7 +122,7 @@ class DefaultController extends BackendController
      */
     public function actionDelete($id)
     {
-        $model = Magazine::model()->with(array('gallery' => array('with' => 'photos')))->findByPk($id);
+        $model = Magazine::model()->with(array('portfolio' => array('with' => 'photos')))->findByPk($id);
         $model->deleteMagazine();
 
         // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser

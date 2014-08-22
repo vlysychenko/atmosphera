@@ -1,0 +1,86 @@
+*{
+	margin:0;
+	padding:0;
+}
+html, body{
+	height:100%;
+	width:100%;
+}
+#page{
+	min-height:100%;
+	width:830px;
+	margin:0 auto;
+}
+#header{
+	width:799px;
+	height:128px;
+	margin:22px 0 17px 31px;
+
+}
+#logo{
+	width:148px;
+	height:108px;
+	float:left;
+}
+#social{
+	float:left;
+	margin:55px 0px 0 19px;
+	height:30px;
+	width:632px;
+	border-bottom:2px solid;
+	border-color:#FF4500;
+}
+#socialButtons{
+	float:right;
+	padding-right: 39px;
+}
+#social a{
+	float:right;
+	margin-left: 10px;
+}
+#menu{
+	height:43px;
+	width:632px;
+	margin:9px 0 0 14px;
+}
+#navigation{	
+	list-style-type:none;
+}
+.navItems{
+	float:left;
+	height:8px;
+	color:#696969;
+	font-size:8px;
+	text-transform:uppercase;
+	margin-left:27px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+li.navItems a{
+	color:#696969;
+	text-decoration:none;
+}
+#sidePanel{
+	margin:0 39px 0 0;
+	float:right;
+	width:158px;
+	height:350px;
+}
+#topContent, #bottomContent{
+	float:right;
+	width:158px;
+	height:175px;
+	overflow:hidden;
+}
+#topContentText, #bottomContentText{
+	font-size:9px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	color:#696969;
+}
+#topContent a, #bottomContent a{
+	margin:0;
+	text-decoration:none;
+	color:#8A2BE2;
+	text-transform:uppercase;
+	font-size:11px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}

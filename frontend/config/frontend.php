@@ -41,8 +41,8 @@ return array(
         'about' => array(
 //            'class' => 'frontend.modules.about.AboutModule',
         ),
-        'articles' => array(
-            'class' => 'frontend.modules.articles.ArticlesModule',
+        'blogs' => array(
+            'class' => 'frontend.modules.blogs.BlogsModule',
         ),
         'contacts' => array(
 //            'class' => 'frontend.modules.contacts.ContactsModule',
@@ -128,9 +128,9 @@ return array(
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
 				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                'articles/view/id/<id:\d+>'=>'articles/default/view/id/<id>',
-                'articles/default/index/page/<id\w+>'=>'articles/default/index/page/<id>',
-                'articles'=>'articles/default/index/',
+                'blogs/view/id/<id:\d+>'=>'blogs/default/view/id/<id>',
+                'blogs/default/index/page/<id\w+>'=>'blogs/default/index/page/<id>',
+                'blogs'=>'blogs/default/index/',
                 'sitemap.xml'=>'sitemap/default/indexxml',
 			),
 		),

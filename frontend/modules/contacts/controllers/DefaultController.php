@@ -2,9 +2,9 @@
 
 class DefaultController extends FrontendController
 {
-    public $meta_keywords= 'Контакты, Granat';
-    public $meta_description='Контакты | Granat';
-    public $meta_title='Контакты | Granat';
+    public $meta_keywords= 'Контакты, Atmosphera';
+    public $meta_description='Контакты | Atmosphera';
+    public $meta_title='Контакты | Atmosphera';
 
     public function actionIndex()
 	{

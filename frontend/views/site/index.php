@@ -26,11 +26,11 @@ $this->widget('frontend.extensions.bxslider.BxSlider',array(
             ?>
         <div class="content-block">
             <div class="title">Интересно</div>
-            <a href="<?=Yii::app()->createAbsoluteUrl('articles/view/id/'.$data['post_id'])?>">
-                <img src="<?=ImageHelper::imageUrl('article_isTop_frontend',$data['photo']['filename'])?>" alt="<?=ContentHelper::prepareStr($data['photo']['description'])?>" title="<?=ContentHelper::prepareStr($data['photo']['description'])?>"/>
+            <a href="<?=Yii::app()->createAbsoluteUrl('blogs/view/id/'.$data['post_id'])?>">
+                <img src="<?=ImageHelper::imageUrl('blogs_isTop_frontend',$data['photo']['filename'])?>" alt="<?=ContentHelper::prepareStr($data['photo']['description'])?>" title="<?=ContentHelper::prepareStr($data['photo']['description'])?>"/>
             </a>
             <div>
-                <h2><a href="<?=Yii::app()->createAbsoluteUrl('articles/view/id/'.$data['post_id'])?>"><?=$data['p_title']?></a></h2>
+                <h2><a href="<?=Yii::app()->createAbsoluteUrl('blogs/view/id/'.$data['post_id'])?>"><?=$data['p_title']?></a></h2>
                 <?=$data['anounce']?>
                 <span class="small"><?=$data['firstname'].' '.$data['lastname'].' | '.$date?></span>
             </div>

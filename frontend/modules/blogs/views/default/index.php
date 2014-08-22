@@ -1,11 +1,11 @@
             <div id='ajaxUp' class="container">
                 <div class="content">
-                <? $this->widget('application.widgets.ArticleSlider.ArticleSliderWidget', array('sliderData' => $sliderData));?>
+                <? $this->widget('application.widgets.BlogsSlider.BlogsSliderWidget', array('sliderData' => $sliderData));?>
                     <div class="content-block">
                         <div class="title">Интересно</div>
                         <?php $this->widget('zii.widgets.CListView', array(
                             'dataProvider'=>$dataProvider,
-                            'itemView'=>'articleitem', // представление для одной записи
+                            'itemView'=>'blogsitem', // представление для одной записи
                             'ajaxUpdate'=>true,
 //                            'emptyText'=>'В данной категории нет товаров.',
 //                            'summaryText'=>"{start}&mdash;{end} из {count}",

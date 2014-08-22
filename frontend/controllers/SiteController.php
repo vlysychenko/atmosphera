@@ -11,9 +11,9 @@
  */
 class SiteController extends FrontendController
 {
-    public $meta_keywords= 'Главная, Granat';
-    public $meta_description='Главная | Granat';
-    public $meta_title='Главная | Granat';
+    public $meta_keywords= 'Главная, Atmosphera';
+    public $meta_description='Главная | Atmosphera';
+    public $meta_title='Главная | Atmosphera';
 
     public function actionIndex()
 	{

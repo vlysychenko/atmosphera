@@ -7,7 +7,7 @@
             <a href="<?=yii::app()->createUrl('about')?>"><?=Yii::t('main', 'about us')?></a>
         </li>
         <li>
-            <a href="<?=yii::app()->createUrl('articles')?>"><?=Yii::t('main', 'articles')?></a>
+            <a href="<?=yii::app()->createUrl('blogs')?>"><?=Yii::t('main', 'blogs')?></a>
         </li>
         <li>
             <a href="<?=yii::app()->createUrl('contacts')?>"><?=Yii::t('main', 'contacts')?></a>

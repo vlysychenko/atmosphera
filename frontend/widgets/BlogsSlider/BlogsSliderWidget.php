@@ -9,7 +9,7 @@
 * lastname
 *                                           
 */
-class ArticleSliderWidget extends CWidget
+class BlogsSliderWidget extends CWidget
 {
     public $sliderData;
     public function init()

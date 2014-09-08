@@ -81,6 +81,9 @@ return array(
         'news' => array(
             'class' => 'backend.modules.news.NewsModule',
         ),
+        'category' => array(
+            'class' => 'backend.modules.category.CategoryModule',
+        ),
         'tag' => array(
             'class' => 'backend.modules.tag.TagModule',
         ),

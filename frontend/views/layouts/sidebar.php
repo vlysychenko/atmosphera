@@ -28,4 +28,11 @@
                 is axed</p>
         </div>-->
     </div>
+    <br/>
+    <br/>
+    <div class="categories">
+        <p><?=Yii::t('main', 'Categories').':'?></p><br/>
+        <? $this->widget('application.widgets.GFilter.GFilterWidget');?>
+    </div>
+    
 </div>

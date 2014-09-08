@@ -124,7 +124,7 @@ class Portfolio extends CActiveRecord
         ));
     }    
     
-    public function saveGallery()
+    public function savePortfolio()
     {
         //save gallery object (with photos) 
         if ($isOK = $this->save() && isset($this->photos))   //save gallery

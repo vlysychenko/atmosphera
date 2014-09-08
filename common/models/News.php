@@ -57,14 +57,14 @@ class News extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('anounce, publication_date, user_id', 'required'),
+			array('anounce, publication_date, user_id, category_id', 'required'),
 			array('is_top, is_slider', 'numerical', 'integerOnly'=>true),
 			array('user_id', 'length', 'max'=>11),
             array('publication_date', 'date', 'format'=>'yyyy-MM-dd hh:mm:ss'),
 			array('content', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('post_id, anounce, publication_date, is_top, is_slider, user_id', 'safe', 'on'=>'search'),  
+			array('post_id, anounce, publication_date, is_top, is_slider, user_id, category_id', 'safe', 'on'=>'search'),  
             //array('content', 'safe', 'on'=>'search'),  
             array('postTitle, postAuthor', 'safe', 'on'=>'search'),
 		);
@@ -116,6 +116,7 @@ class News extends CActiveRecord
 			'is_top' => Yii::t('main', 'Is top'),
 			'is_slider' => Yii::t('main', 'Is slider'),
 			'user_id' => Yii::t('main', 'User'),
+                        'category_id' => Yii::t('main', 'Category'),
 		);
 	}
 

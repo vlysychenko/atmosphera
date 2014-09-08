@@ -161,4 +161,8 @@ return array (
   'horoscope' => 'гороскоп',
   'sitemap' => 'карта сайта',
   'Comments' => 'Комменты',
+  'Category' => 'Категория',
+  'Categories' => 'Категории',
+  'interior design' => 'ДИЗАЙН ИНТЕРЬЕРА',
+  'This category already exists' => 'Эта категория уже существует', 
 );

@@ -21,7 +21,7 @@ class PortfolioPosts extends News
             array('publication_date', 'date', 'format'=>'yyyy-MM-dd hh:mm:ss'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('post_id, anounce, publication_date, is_top, user_id', 'safe', 'on'=>'search'),  
+            array('post_id, anounce, publication_date, is_top, user_id, category_id', 'safe', 'on'=>'search'),  
             array('postTitle,publication_date, postAuthor', 'safe', 'on'=>'search'),
         );
     }

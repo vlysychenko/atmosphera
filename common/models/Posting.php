@@ -24,6 +24,7 @@ class Posting extends CActiveRecord
     const POST_TYPE_NEWS      = 1;
     const POST_TYPE_PORTFOLIO = 2;
     const POST_TYPE_HOROSCOPE = 3;
+    const POST_TYPE_DESIGN    = 4;
 
     private $batchPortfolioIds = array();
     private $savedPortfolioId;

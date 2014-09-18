@@ -9,18 +9,18 @@
  */
 return array(
 	'modules' => array(
-//		'gii' => array(
-//			'class' => 'system.gii.GiiModule',
-//			'password' => 'yii',
-//			'ipFilters' => array('127.0.0.1','::1'),
-//		),
+		'gii' => array(
+			'class' => 'system.gii.GiiModule',
+			'password' => 'yii',
+			'ipFilters' => array('127.0.0.1','::1'),
+		),
 	),
 	'components' => array(
 //		change to suit your needs
 		'db' => array(
 			'connectionString' => 'mysql:host=localhost;port=3306;dbname=atmosphera',
-			'username' => 'root',
-			'password' => '',
+			'username' => 'andrey',
+			'password' => 'admin',
 			'enableProfiling' => true,
 			'enableParamLogging' => true,
 			'charset' => 'utf8',
@@ -30,7 +30,7 @@ return array(
 		'yii.handleErrors' => true,
 		'yii.debug' => true,
 		'yii.traceLevel' => 3,
-        'uploadDir' => dirname(__FILE__) . '/../..' . '/upload/',
+        'uploadDir' => dirname(__FILE__) . '/../..' . '/upload',
         'uploadUrl' => '/upload/',
         'defaultPhoto' => '/upload/nophoto.jpg',
 	)

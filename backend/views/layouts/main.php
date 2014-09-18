@@ -35,6 +35,9 @@
                                 echo TbHtml::navList(array(
 //                                array('label' => 'List header'), todo: ??
                                 array('label' => Yii::t('main','Users'),     'icon' => 'user',   'url' =>  Yii::app()->createAbsoluteUrl('user/admin'), 'active' => $controllerId == 'user/admin'),
+                                array('label' => Yii::t('main','Main page'),  'icon' => 'asterisk','url' =>  Yii::app()->createAbsoluteUrl('mainpage'), 'active' => $controllerId == 'mainpage/default'),
+                                array('label' => Yii::t('main','Design'),  'icon' => 'th','url' =>  Yii::app()->createAbsoluteUrl('design'), 'active' => $controllerId == 'design/default'),
+                                array('label' => Yii::t('main','Category'),  'icon' => 'tasks','url' =>  Yii::app()->createAbsoluteUrl('category'), 'active' => $controllerId == 'category/default'),
                                 array('label' => Yii::t('main','News'),      'icon' => 'edit',   'url' => Yii::app()->createAbsoluteUrl('news'), 'active' => $controllerId == 'news/default'),
                                 array('label' => Yii::t('main','Galleries'), 'icon' => 'picture','url' => Yii::app()->createAbsoluteUrl('portfolioposts'), 'active' => $controllerId == 'portfolioposts/default'),
                                 array('label' => Yii::t('main','Comments'),  'icon' => 'pencil', 'url' =>  Yii::app()->createAbsoluteUrl('comments'), 'active' => $controllerId == 'comments/default'),

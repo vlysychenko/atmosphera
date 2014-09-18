@@ -56,7 +56,7 @@ return array(
         'search' => array(
             'class' => 'frontend.modules.search.SearchModule',
         ),
-        'horoscope',
+        'design',
 
         /*'comments'=>array(
             'class' => 'common.modules.comments.CommentsModule',
@@ -124,6 +124,7 @@ return array(
 			'showScriptName' => false,
 
 			'rules' => array(
+				'design/<id:\d+>'=>'design/default/view/id/<id>',
 				// default rules
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',

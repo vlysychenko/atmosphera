@@ -29,7 +29,12 @@ class PostController extends BackendController
         if(isset($_GET[$this->_modelclass])){
             $model->attributes = $_GET[$this->_modelclass];
         }
-        $this->render('application.modules.news.views.default.index', array('model' => $model));
+        $className = strtolower($this->_modelclass);
+
+        if($className === 'portfolioposts'){
+            $className = 'news';
+        }
+        $this->render('application.modules.'.$className.'.views.default.index', array('model' => $model));
     }
     
   //action for is_top
@@ -150,7 +155,7 @@ class PostController extends BackendController
             
             if ($success) {
                 $transaction = Yii::app()->db->beginTransaction();
-                if ($success = $portfolio->savePortfolio()) {
+                if ($success = $portfolio->saveGallery()) {
                     $post->gallery_id = $portfolio->gallery_id;
                     if ($success = $post->save()) {
                         $news->post_id = $post->post_id;
@@ -185,7 +190,13 @@ class PostController extends BackendController
                 
             }
         }
-        $this->render('application.modules.news.views.default.form', array('news' => $news, 'post' => $post, 'portfolio' => $portfolio));
+        $className = strtolower($this->_modelclass);
+        $category = Category::model()->findAll();
+
+        if($className === 'portfolioposts'){
+            $className = 'news';
+        }
+        $this->render('application.modules.'.$className.'.views.default.form', array($className => $news, 'post' => $post, 'portfolio' => $portfolio, 'category'=>$category));
     }
     
 }

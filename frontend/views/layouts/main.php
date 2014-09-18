@@ -36,14 +36,15 @@
                 <div class="header-block">
                     <ul class="social">
                         <?$links = Yii::app()->getController()->prepareSocialLinks();?>
-                        <li><a class="vk" href="<?=$links['vk'] ? $links['vk'] : ''?>">Vkontakte</a></li>
                         <li><a class="fb" href="<?=$links['facebook'] ? $links['facebook'] : ''?>">Facebook</a></li>
+                        <li><a class="vk" href="<?=$links['vk'] ? $links['vk'] : ''?>">Vkontakte</a></li>
                     </ul>
                 </div>
                 <span></span>                
                      <ul class="menu">
+                        <li><a href="<?=Yii::app()->createAbsoluteUrl('design')?>"><?=Yii::t('main','DESIGN')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('portfolio')?>"><?=Yii::t('main','portfolio')?></a></li>
-                        <li><a href="<?=Yii::app()->createAbsoluteUrl('partners')?>"><?=Yii::t('main','partners')?></a></li>
+<!--                        <li><a href="--><?//=Yii::app()->createAbsoluteUrl('partners')?><!--">--><?//=Yii::t('main','partners')?><!--</a></li>-->
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('about')?>"><?=Yii::t('main','about us')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('blogs')?>"><?=Yii::t('main','blogs')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('contacts')?>"><?=Yii::t('main','contacts')?></a></li>
@@ -59,7 +60,7 @@
             </div>
             <div id="footer">
                 <div class="inner">
-                    <span>партнеры</span>
+                    <span></span>
             <?
               $this->widget('frontend.extensions.bxslider.BxSlider',array(
               'slides'=> $this->preparePartnerSlides(),

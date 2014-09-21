@@ -124,7 +124,8 @@ return array(
 			'showScriptName' => false,
 
 			'rules' => array(
-				'design/<id:\d+>'=>'design/default/view/id/<id>',
+				'design/<id:\d+>'=>'design/default/index/id/<id>',
+                'design/view/id/<id:\d+>'=>'design/default/view/id/<id>',
 				// default rules
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',

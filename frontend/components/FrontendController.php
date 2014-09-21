@@ -88,9 +88,10 @@ class FrontendController extends Controller{
 
 
     public function prepareSocialLinks(){
-        $file = dirname(__FILE__).'/../../common/config/contacts.php';
-        $content = file_get_contents($file);
-        $arr = json_decode($content, true);
+
+        $arr['facebook'] = Otherproperties::model()->findByPk('link_facebook')->value;
+        $arr['vk'] = Otherproperties::model()->findByPk('link_vk')->value;
+
         return $arr;
     }
 

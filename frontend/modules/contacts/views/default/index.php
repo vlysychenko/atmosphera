@@ -2,7 +2,7 @@
                 <div class="content">
                     <div class="title">контакты</div>
                     <div class="partner">
-                        <img src="images/logo.png" alt=""/>
+<!--                        <img src="images/logo.png" alt=""/>-->
                         <div>
                             <h3><?=$data['title']?></h3>
 <!--                            <p>Дорогие рекламодатели!<br/>-->

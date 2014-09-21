@@ -98,6 +98,7 @@ return array(
                     ),
                 ),*/
                 //model with default settings
+                'Design',
                 'News',
                 'PortfolioPosts',
             ),

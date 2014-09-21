@@ -1,0 +1,31 @@
+.category li{
+    list-style-type: none;
+}
+
+.category li a{
+    text-decoration: none;
+    font: 14px Tahoma, "Geneva CY", sans-serif;
+}
+
+.category li a:hover{
+    text-decoration: underline;
+}
+
+.title-for-main-news{
+    width: 85px;
+    text-align: right;
+    font-size: 14px;
+    color: #a578c6;
+    margin-bottom: 10px;
+}
+
+.content.for-main-news{
+    padding-top: 15px;
+    width: 250px;
+    height: 200px;
+    overflow-y: hidden;
+}
+
+.content.for-main-news a{
+    text-decoration: none;
+}

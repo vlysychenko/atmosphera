@@ -73,8 +73,7 @@ echo $form->errorSummary(array($model, $portfolio), null, null, array('class' =>
         </div> 
     
         <div class="control-group">
-            <?php echo TbHtml::activeLabelEx($model, Yii::t('main', 'Portfolio'), array(
-                'for'=>'Posting_portfolio',
+            <?php echo TbHtml::label(Yii::t('main', 'Portfolio'),'Posting_portfolio', array(
                 'class'=>'control-label',
             )); ?>
             <div class="controls">

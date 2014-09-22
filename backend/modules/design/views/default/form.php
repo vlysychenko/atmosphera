@@ -67,7 +67,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     <div class="control-group">
         <?php echo TbHtml::activeLabelEx($design,'category', array('class'=>'control-label')); ?>
         <div class="controls">
-            <?php echo CHtml::activeDropDownList($design, 'category', CHtml::listData($category, 'id', 'category'), array('size'=>1, 'empty'=>'')); ?>
+            <?php echo CHtml::activeDropDownList($design, 'category', CHtml::listData($category, '', ''), array('size'=>1, 'empty'=>'')); ?>
             <?php //echo TbHtml::dropDownList($modelClass.'[user_id]', $design->user_id, CHtml::listData(User::model()->findAll(), 'user_id', 'email'), array('size'=>1)); ?>
         </div>
     </div>
@@ -101,7 +101,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         </div>
     </div>
 
-<?php if ($modelClass == 'Design') { ?>
+<?php if ($modelClass == 'News') { ?>
     <div class="control-group">
         <?php echo TbHtml::activeLabelEx($design, 'content', array('class'=>'control-label')); ?>
         <div class="controls">
@@ -124,8 +124,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 <?php } ?>
 
     <div class="control-group">
-        <?php echo TbHtml::activeLabelEx($post, Yii::t('main', 'Tag List'), array(
-            'for'=>'Posting_tagList',
+        <?php echo TbHtml::label(Yii::t('main', 'Tag List'), 'Posting_tagList', array(
             'class'=>'control-label',
         )); ?>
         <div class="controls">
@@ -146,8 +145,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     </div>
 
     <div class="control-group">
-        <?php echo TbHtml::activeLabelEx($design, Yii::t('main', 'Portfolio'), array(
-            'for'=>'Posting_portfolio',
+        <?php echo TbHtml::label(Yii::t('main', 'Portfolio'), 'Posting_portfolio', array(
             'class'=>'control-label',
         )); ?>
         <div class="controls">

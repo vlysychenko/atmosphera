@@ -116,8 +116,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 <?php } ?>    
     
     <div class="control-group">
-        <?php echo TbHtml::activeLabelEx($post, Yii::t('main', 'Tag List'), array(
-            'for'=>'Posting_tagList',
+        <?php echo TbHtml::label(Yii::t('main', 'Tag List'), 'Posting_tagList', array(
             'class'=>'control-label',
         )); ?>
         <div class="controls">
@@ -138,8 +137,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     </div>   
 
     <div class="control-group">
-        <?php echo TbHtml::activeLabelEx($news, Yii::t('main', 'Portfolio'), array(
-            'for'=>'Posting_portfolio',
+        <?php echo TbHtml::label(Yii::t('main', 'Portfolio'), 'Posting_portfolio', array(
             'class'=>'control-label',
         )); ?>
         <div class="controls">

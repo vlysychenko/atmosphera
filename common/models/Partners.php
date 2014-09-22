@@ -40,8 +40,8 @@ class Partners extends CActiveRecord
 		return array(
 			array('title, is_active', 'required'),
 			array('is_active, order_nr', 'numerical', 'integerOnly'=>true),
-            array('order_nr', 'unique'),
-            array('order_nr', 'numerical', 'min'=>1),
+//            array('order_nr', 'unique'),
+//            array('order_nr', 'numerical', 'min'=>1),
 			array('title', 'length', 'max'=>255),
 			array('description, contacts', 'safe'),
 			// The following rule is used by search().

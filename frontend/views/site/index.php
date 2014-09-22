@@ -1,4 +1,6 @@
+
 <div class="container">
+    <div class="content"><img src="<?php echo $image ?>" alt="image" width="750" height="1000"/></div>
     <div class="content">
         <div class="slider">
 <?

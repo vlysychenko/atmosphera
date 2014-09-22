@@ -24,34 +24,34 @@
     <?php echo $form->errorSummary($model); ?>
     <?php echo $form->errorSummary($partnerModel); ?>
 
-    <div class="control-group">
-        <?php echo $form->labelEx($model,Yii::t('main','Link for VK'),array('class'=>'control-label')); ?>
-        <div class="controls">
-            <?php echo $form->textField($model,'vk',array('style'=>'width: 700px')); ?>
-        </div>
-    </div>
-
-    <div class="control-group">
-        <?php echo $form->labelEx($model,Yii::t('main','Link for Twitter'),array('class'=>'control-label')); ?>
-        <div class="controls">
-            <?php echo $form->textField($model,'twitter',array('style'=>'width: 700px')); ?>
-        </div>
-    </div>
-
-
-    <div class="control-group">
-        <?php echo $form->labelEx($model,Yii::t('main','Link for Facebook'),array('class'=>'control-label')); ?>
-        <div class="controls">
-            <?php echo $form->textField($model,'facebook',array('style'=>'width: 700px')); ?>
-        </div>
-    </div>
-
-    <div class="control-group">
-        <?php echo $form->labelEx($model,Yii::t('main','Link for Odnoklassniki'),array('class'=>'control-label')); ?>
-        <div class="controls">
-            <?php echo $form->textField($model,'odnokl',array('style'=>'width: 700px')); ?>
-        </div>
-    </div>
+<!--    <div class="control-group">-->
+<!--        --><?php //echo $form->labelEx($model,Yii::t('main','Link for VK'),array('class'=>'control-label')); ?>
+<!--        <div class="controls">-->
+<!--            --><?php //echo $form->textField($model,'vk',array('style'=>'width: 700px')); ?>
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="control-group">-->
+<!--        --><?php //echo $form->labelEx($model,Yii::t('main','Link for Twitter'),array('class'=>'control-label')); ?>
+<!--        <div class="controls">-->
+<!--            --><?php //echo $form->textField($model,'twitter',array('style'=>'width: 700px')); ?>
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!---->
+<!--    <div class="control-group">-->
+<!--        --><?php //echo $form->labelEx($model,Yii::t('main','Link for Facebook'),array('class'=>'control-label')); ?>
+<!--        <div class="controls">-->
+<!--            --><?php //echo $form->textField($model,'facebook',array('style'=>'width: 700px')); ?>
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="control-group">-->
+<!--        --><?php //echo $form->labelEx($model,Yii::t('main','Link for Odnoklassniki'),array('class'=>'control-label')); ?>
+<!--        <div class="controls">-->
+<!--            --><?php //echo $form->textField($model,'odnokl',array('style'=>'width: 700px')); ?>
+<!--        </div>-->
+<!--    </div>-->
 
     <div class="control-group">
         <?php echo $form->labelEx($partnerModel,Yii::t('main','title'),array('class'=>'control-label')); ?>

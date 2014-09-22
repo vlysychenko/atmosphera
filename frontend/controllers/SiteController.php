@@ -19,6 +19,7 @@ class SiteController extends FrontendController
 	{
 		$this->render('index',array('newsData'=> $this->prepareNewsData(),
                                     'slides' =>  $this->prepareSlides(),
+                                    'image'=> $this->prepareImage(),
                                     ));
 	}
     
@@ -74,4 +75,13 @@ class SiteController extends FrontendController
 				$this->render('error', $error);
 		}
 	}
+
+    public function prepareImage(){
+        $path = Otherproperties::model()->findByPk('mainpage');
+        if(!$path->value){
+            $image = '';
+        }else $image = '/upload/'.$path->value;
+
+        return $image;
+    }
 }

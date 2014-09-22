@@ -8,6 +8,7 @@
     <meta name="KeyWords" content="<?=ContentHelper::prepareStr(Yii::app()->getController()->getKeywords())?>" />
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" media="screen" href="<?=Yii::app()->createAbsoluteUrl('/')?>/css/style.css" >
+    <link rel="stylesheet" media="screen" href="<?=Yii::app()->createAbsoluteUrl('/')?>/css/sidebar.css" >
     <!--[if lt IE 9]><script src="/js/html5.js"></script><![endif]-->
     <?php 
         Yii::app()->clientScript->registerCoreScript('jquery');
@@ -36,14 +37,15 @@
                 <div class="header-block">
                     <ul class="social">
                         <?$links = Yii::app()->getController()->prepareSocialLinks();?>
-                        <li><a class="vk" href="<?=$links['vk'] ? $links['vk'] : ''?>">Vkontakte</a></li>
-                        <li><a class="fb" href="<?=$links['facebook'] ? $links['facebook'] : ''?>">Facebook</a></li>
+                        <li><a class="fb" href="<?=$links['facebook'] ? 'http://'.$links['facebook'] : ''?>">Facebook</a></li>
+                        <li><a class="vk" href="<?=$links['vk'] ? 'http://'.$links['vk'] : ''?>">Vkontakte</a></li>
                     </ul>
                 </div>
                 <span></span>                
                      <ul class="menu">
-                        <li><a href="<?=Yii::app()->createAbsoluteUrl('portfolio')?>"><?=Yii::t('main','portfolio')?></a></li>
-                        <li><a href="<?=Yii::app()->createAbsoluteUrl('partners')?>"><?=Yii::t('main','partners')?></a></li>
+                        <li><a href="<?=Yii::app()->createAbsoluteUrl('design')?>"><?=Yii::t('main','DESIGN')?></a></li>
+                        <li><a href="<?=Yii::app()->createAbsoluteUrl('portfolio')?>"><?=Yii::t('main','PORTFOLIO')?></a></li>
+<!--                        <li><a href="--><?//=Yii::app()->createAbsoluteUrl('partners')?><!--">--><?//=Yii::t('main','partners')?><!--</a></li>-->
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('about')?>"><?=Yii::t('main','about us')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('blogs')?>"><?=Yii::t('main','blogs')?></a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('contacts')?>"><?=Yii::t('main','contacts')?></a></li>
@@ -59,7 +61,7 @@
             </div>
             <div id="footer">
                 <div class="inner">
-                    <span>партнеры</span>
+                    <span></span>
             <?
               $this->widget('frontend.extensions.bxslider.BxSlider',array(
               'slides'=> $this->preparePartnerSlides(),
@@ -76,10 +78,10 @@
               ));
             ?>
                 </div>
-                <div style="text-align: center; margin-top: 10px;">
-                    <div style="float: right; margin-right: 20px;">Сайт разработан компанией <a style="color:#000; " target="_blank" href="http://academysmart.com.ua/">ООО "Академия Смарт"</a></div>                
-                    <a style="color: #FFFFFF; position: relative; left: 160px;" href="<?=Yii::app()->createAbsoluteUrl('sitemap')?>">Карта сайта</a>
-                </div>
+<!--                <div style="text-align: center; margin-top: 10px;">-->
+<!--                    <div style="float: right; margin-right: 20px;">Сайт разработан компанией <a style="color:#000; " target="_blank" href="http://academysmart.com.ua/">ООО "Академия Смарт"</a></div>                -->
+<!--                    <a style="color: #FFFFFF; position: relative; left: 160px;" href="--><?//=Yii::app()->createAbsoluteUrl('sitemap')?><!--">Карта сайта</a>-->
+<!--                </div>-->
             </div>
         </div>
     </div>

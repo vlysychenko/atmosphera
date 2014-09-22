@@ -101,7 +101,16 @@ return array(
         ),
         'about' => array(
             'class' => 'backend.modules.about.AboutModule',
-        ),        
+        ),
+        'mainpage' => array(
+            'class' =>  'backend.modules.mainpage.MainpageModule'
+        ),
+        'design' => array(
+            'class' =>  'backend.modules.design.DesignModule'
+        ),
+        'category' => array(
+            'class' =>  'backend.modules.category.CategoryModule'
+        ),
     ),
 
 	// application components

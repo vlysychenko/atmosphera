@@ -37,8 +37,8 @@
                 <div class="header-block">
                     <ul class="social">
                         <?$links = Yii::app()->getController()->prepareSocialLinks();?>
-                        <li><a class="fb" href="<?=$links['facebook'] ? 'http://'.$links['facebook'] : ''?>">Facebook</a></li>
                         <li><a class="vk" href="<?=$links['vk'] ? 'http://'.$links['vk'] : ''?>">Vkontakte</a></li>
+                        <li><a class="fb" href="<?=$links['facebook'] ? 'http://'.$links['facebook'] : ''?>">Facebook</a></li>
                     </ul>
                 </div>
                 <span></span>                

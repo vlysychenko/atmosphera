@@ -36,8 +36,8 @@ h2 a { text-decoration: none; }
 #header .header-block .social { list-style: none outside; overflow: hidden; float: right; padding-right: 44px; }
 #header .header-block .social li { float: right;}
 #header .header-block .social li a { display: inline-block; *display: inline; zoom: 1; text-indent: -9999px; width: 35px; height: 35px; margin-right: 4px; padding: 4px 6px;}
-#header .header-block .social li a.vk { background: url('../images/icons/fb.png') no-repeat; width: 29px; height: 28px; }
-#header .header-block .social li a.fb { background: url('../images/icons/vk.png') no-repeat; width: 29px; height: 28px; }
+#header .header-block .social li a.fb { background: url('../images/icons/fb.png') no-repeat; width: 29px; height: 28px; }
+#header .header-block .social li a.vk { background: url('../images/icons/vk.png') no-repeat; width: 29px; height: 28px; }
 #header span {position: relative; display: block; padding-left: 16px; padding-bottom: 5px; border-bottom: 5px solid #f26624; margin-bottom: 10px;}
 #header .header-block .search { position: relative; }
 #header .header-block .search input[type="text"] { padding: 0 5px 0 30px; width: 100%; height: 22px; line-height: 22px; outline: none; }

@@ -27,41 +27,41 @@
 <!--    <div class="control-group">-->
 <!--        --><?php //echo $form->labelEx($model,Yii::t('main','Link for VK'),array('class'=>'control-label')); ?>
 <!--        <div class="controls">-->
-<!--            --><?php //echo $form->textField($model,'vk',array('style'=>'width: 700px')); ?>
+            <?php echo $form->hiddenField($model,'vk',array('style'=>'width: 700px','value'=>'https://www.facebook.com/')); ?>
 <!--        </div>-->
 <!--    </div>-->
-<!---->
+
 <!--    <div class="control-group">-->
 <!--        --><?php //echo $form->labelEx($model,Yii::t('main','Link for Twitter'),array('class'=>'control-label')); ?>
 <!--        <div class="controls">-->
-<!--            --><?php //echo $form->textField($model,'twitter',array('style'=>'width: 700px')); ?>
+            <?php echo $form->hiddenField($model,'twitter',array('style'=>'width: 700px', 'value'=>'http://www.twitter.com')); ?>
 <!--        </div>-->
 <!--    </div>-->
-<!---->
-<!---->
+
+
 <!--    <div class="control-group">-->
 <!--        --><?php //echo $form->labelEx($model,Yii::t('main','Link for Facebook'),array('class'=>'control-label')); ?>
 <!--        <div class="controls">-->
-<!--            --><?php //echo $form->textField($model,'facebook',array('style'=>'width: 700px')); ?>
+            <?php echo $form->hiddenField($model,'facebook',array('style'=>'width: 700px', 'value'=>'http://www.facebook.com')); ?>
 <!--        </div>-->
 <!--    </div>-->
-<!---->
+
 <!--    <div class="control-group">-->
 <!--        --><?php //echo $form->labelEx($model,Yii::t('main','Link for Odnoklassniki'),array('class'=>'control-label')); ?>
 <!--        <div class="controls">-->
-<!--            --><?php //echo $form->textField($model,'odnokl',array('style'=>'width: 700px')); ?>
+            <?php echo $form->hiddenField($model,'odnokl',array('style'=>'width: 700px', 'value'=>'http://www.odnoklassniki.ru')); ?>
 <!--        </div>-->
 <!--    </div>-->
 
     <div class="control-group">
-        <?php echo $form->labelEx($partnerModel,Yii::t('main','title'),array('class'=>'control-label')); ?>
+        <?php echo CHtml::label(Yii::t('main','title'),'',array('class'=>'control-label')); ?>
         <div class="controls">
         <?php echo $form->textField($partnerModel,'title',array('style'=>'width: 500px')); ?>
         </div>
     </div>
 
     <div class="control-group">
-        <?php echo $form->labelEx($partnerModel,Yii::t('main','description'),array('class'=>'control-label')); ?>
+        <?php echo CHtml::label(Yii::t('main','description'),'',array('class'=>'control-label')); ?>
         <div class="controls">
             <?php $this->widget('application.widgets.imperaviRedactor.ImperaviRedactorWidget',array(
                 'model' => $partnerModel,
@@ -80,7 +80,7 @@
         </div>
     </div>
     <div class="control-group">
-        <?php echo $form->labelEx($partnerModel,Yii::t('main','contacts'),array('class'=>'control-label')); ?>
+        <?php echo CHtml::label(Yii::t('main','contacts'),'',array('class'=>'control-label')); ?>
         <div class="controls">
             <?php $this->widget('application.widgets.imperaviRedactor.ImperaviRedactorWidget',array(
                 'model' => $partnerModel,

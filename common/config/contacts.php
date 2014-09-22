@@ -1,0 +1,1 @@
+{"vk":"https:\/\/www.facebook.com\/","twitter":"http:\/\/www.twitter.com","facebook":"http:\/\/www.facebook.com","odnokl":"http:\/\/www.odnoklassniki.ru"}

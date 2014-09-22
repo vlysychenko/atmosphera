@@ -4,7 +4,7 @@
 
 $this->widget('bootstrap.widgets.TbBreadcrumb', array(
         'links'=>array(
-            Yii::t('main','Categories')=> Yii::app()->createUrl('category'),
+            Yii::t('main','Category')=> Yii::app()->createUrl('category'),
             Yii::t('main','Index')),
     ));
 

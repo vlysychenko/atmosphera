@@ -10,7 +10,7 @@ class ContactForm extends CFormModel
     public function rules()
     {
         return array(
-            array('facebook, odnokl,vk, twitter', 'url'),
+//            array('facebook, odnokl,vk, twitter', 'url'),
             array('facebook, twitter, vk, odnokl','safe'),
         );
     }

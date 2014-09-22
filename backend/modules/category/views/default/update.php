@@ -3,11 +3,11 @@
 /* @var $this CategoryController */
 /* @var $model Category */
 
-$this->breadcrumbs=array(
-    'Categories'=>array('index'),
-    $model->category=>array('view','id'=>$model->id),
-    'Update',
-);
+$this->widget('bootstrap.widgets.TbBreadcrumb', array(
+        'links'=>array(
+            Yii::t('main','Category')=> Yii::app()->createUrl('category'),
+            Yii::t('main','Update')),
+    ));
 
 $this->menu=array(
     array('label'=>'List Category', 'url'=>array('index')),
@@ -16,7 +16,5 @@ $this->menu=array(
     array('label'=>'Manage Category', 'url'=>array('admin')),
 );
 ?>
-
-<h1>Update Category <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

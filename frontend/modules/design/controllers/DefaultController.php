@@ -8,7 +8,7 @@ class DefaultController extends FrontendController
 
 	public function actionIndex()
 	{
-        $categoryId = Yii::app()->request->getParam('id');
+        $categoryId = Yii::app()->request->getParam('post_id');
         //data for slider widget
         $sliderData = Yii::app()->db->createCommand('SELECT p.`title` AS p_title, p.post_id AS id, n.`publication_date`, u.`firstname`, u.`lastname`, g.`gallery_id` FROM design AS n
                                                             LEFT JOIN users AS u ON u.`user_id` = n.`user_id`
@@ -17,6 +17,9 @@ class DefaultController extends FrontendController
                                                         WHERE n.`is_slider` >= 1 AND n.`publication_date` <= NOW() AND p.is_active = 1
                                                         ORDER BY n.`is_slider` ASC')->queryAll();
 if(isset($categoryId)){
+    $title = Yii::app()->db->createCommand("SELECT category FROM category WHERE id= ".$categoryId)->queryRow();
+    $this->meta_title = $title['category'].' | Atmosphera';
+
     $sqlComand = Yii::app()->db->createCommand('SELECT n.post_id, p.`title` AS p_title, n.`publication_date`, u.`firstname`, u.`lastname`, n.anounce, n.content FROM design AS n
                                                         LEFT JOIN users AS u ON u.`user_id` = n.`user_id`
                                                         LEFT JOIN posting AS p ON p.`post_id` = n.`post_id`

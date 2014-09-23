@@ -67,7 +67,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     <div class="control-group">
         <?php echo TbHtml::activeLabelEx($design,'category', array('class'=>'control-label')); ?>
         <div class="controls">
-            <?php echo CHtml::activeDropDownList($design, 'category', CHtml::listData($category, '', ''), array('size'=>1, 'empty'=>'')); ?>
+            <?php echo CHtml::activeDropDownList($design, 'category', CHtml::listData($category, 'id', 'category'), array('size'=>1, 'empty'=>'')); ?>
             <?php //echo TbHtml::dropDownList($modelClass.'[user_id]', $design->user_id, CHtml::listData(User::model()->findAll(), 'user_id', 'email'), array('size'=>1)); ?>
         </div>
     </div>

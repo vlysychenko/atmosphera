@@ -1,6 +1,6 @@
             <div class="container">
                 <div class="content">
-                    <div class="title">контакты</div>
+                    <div class="title"><?php echo Yii::t('main', 'Contacts')?></div>
                     <div class="partner">
 <!--                        <img src="images/logo.png" alt=""/>-->
                         <div>

@@ -2,7 +2,7 @@
                 <div class="content">
                 <? $this->widget('application.widgets.BlogsSlider.BlogsSliderWidget', array('sliderData' => $sliderData));?>
                     <div class="content-block">
-                        <div class="title">Интересно</div>
+                        <div class="title"><?php echo Yii::t('main', 'Blog')?></div>
                         <?php $this->widget('zii.widgets.CListView', array(
                             'dataProvider'=>$dataProvider,
                             'itemView'=>'blogsitem', // представление для одной записи

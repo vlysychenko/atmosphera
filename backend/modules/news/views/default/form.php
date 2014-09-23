@@ -6,7 +6,7 @@ $modelClass = get_class($news);
 
 $this->widget('bootstrap.widgets.TbBreadcrumb', array(
     'links'=>array(
-            Yii::t('main',ucfirst($this->module->id))=> Yii::app()->createUrl($this->module->id), 
+            Yii::t('main',ucfirst($this->module->id))=> Yii::app()->createUrl($this->module->id),
             Yii::t('main',ucfirst($this->action->id)),//Yii::t('main','Update')
     ),
 ));

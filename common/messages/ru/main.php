@@ -61,6 +61,7 @@ return array (
   'First'=>'Первая',
   'Galleries' => 'Галереи',
   'portfolioposts' => 'Портфолио',
+  'Portfolioposts' => 'Портфолио',
   'Horoscope' => 'Гороскоп',
   'Id' => '',
   'Portfolio must have photos' => 'Портфолио должно содержать фото',
@@ -111,7 +112,7 @@ return array (
   'photo description' => 'Описание фото',
   'publication' => 'публикация',
   'title' => 'Заголовок',
-  'News' => 'Новости',
+  'News' => 'Блог',
   'Users'=>'Юзеры',
   'Magazines'=>'Журналы',
   'Title' => 'Заголовок',
@@ -178,4 +179,5 @@ return array (
   'INTERESTING FROM THE BLOG'=>'ИНТЕРЕСНОЕ ИЗ БЛОГА',
   'Category'=>'Категории',
   'Number'=>'Номер',
+  'Mainpage'=>'Главная страница',
 );

@@ -101,7 +101,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         </div>
     </div>
 
-<?php if ($modelClass == 'News') { ?>
+<?php if ($modelClass == 'Design') { ?>
     <div class="control-group">
         <?php echo TbHtml::activeLabelEx($design, 'content', array('class'=>'control-label')); ?>
         <div class="controls">

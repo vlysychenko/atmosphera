@@ -20,15 +20,17 @@ if(isset($categoryId)){
     $title = Yii::app()->db->createCommand("SELECT category FROM category WHERE id= ".$categoryId)->queryRow();
     $this->meta_title = $title['category'].' | Atmosphera';
 
-    $sqlComand = Yii::app()->db->createCommand('SELECT n.post_id, p.`title` AS p_title, n.`publication_date`, u.`firstname`, u.`lastname`, n.anounce, n.content FROM design AS n
+    $sqlComand = Yii::app()->db->createCommand('SELECT n.post_id, p.`title` AS p_title, n.`publication_date`, u.`firstname`, u.`lastname`, n.anounce, n.content, ph.filename FROM design AS n
                                                         LEFT JOIN users AS u ON u.`user_id` = n.`user_id`
                                                         LEFT JOIN posting AS p ON p.`post_id` = n.`post_id`
+                                                        LEFT JOIN photo AS ph ON ph.`gallery_id` = p.`gallery_id`
                                                         WHERE p.is_active = 1 AND n.`publication_date` <= NOW() AND n.`category` ='.$categoryId.'
                                                         ORDER BY n.is_top DESC, n.`publication_date` DESC');
 }else{
-    $sqlComand = Yii::app()->db->createCommand('SELECT n.post_id, p.`title` AS p_title, n.`publication_date`, u.`firstname`, u.`lastname`, n.anounce, n.content FROM design AS n
+    $sqlComand = Yii::app()->db->createCommand('SELECT n.post_id, p.`title` AS p_title, n.`publication_date`, u.`firstname`, u.`lastname`, n.anounce, n.content, ph.filename FROM design AS n
                                                         LEFT JOIN users AS u ON u.`user_id` = n.`user_id`
                                                         LEFT JOIN posting AS p ON p.`post_id` = n.`post_id`
+                                                        LEFT JOIN photo AS ph ON ph.`gallery_id` = p.`gallery_id`
                                                         WHERE p.is_active = 1 AND n.`publication_date` <= NOW()
                                                         ORDER BY n.is_top DESC, n.`publication_date` DESC');
 

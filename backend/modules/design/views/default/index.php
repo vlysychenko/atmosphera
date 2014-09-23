@@ -90,7 +90,7 @@ $dateFilter = $this->widget('yiiwheels.widgets.datepicker.WhDatePicker', array(
             'class'=>'common.widgets.PButtonColumn',
             //'deleteButtonImageUrl' => false,
             //'deleteButtonIcon' => false,
-            'template' => ($modelClass == 'News' ? '{update}{delete}{active}{top}{slider}' : '{update}{delete}{active}{top}') ,
+            'template' => ($modelClass == 'Design' ? '{update}{delete}{active}{top}{slider}' : '{update}{delete}{active}{top}') ,
             'buttons' => array('active' => array(
                                             'labelExpression' => '$data->post->is_active == 1 ?  Yii::t("main","Off") : Yii::t("main","On")',
                                             'url' => 'Yii::app()->controller->createUrl("setstatus", array("id" => $data->post_id, "is_active" => (!$data->post->is_active) ? 1:0))',
@@ -114,15 +114,15 @@ $dateFilter = $this->widget('yiiwheels.widgets.datepicker.WhDatePicker', array(
                                             'options' => array(
                                                 'rel' => 'nofollow',
                                                 'ajax' => array(
-                                                    'type' => 'get', 
-                                                    'url'=>'js:$(this).attr("href")', 
-                                                    'beforeSend' => 'js:onBeforeSend', 
-                                                    'success' => 'js:onSuccess', 
-                                                ), 
+                                                    'type' => 'get',
+                                                    'url'=>'js:$(this).attr("href")',
+                                                    'beforeSend' => 'js:onBeforeSend',
+                                                    'success' => 'js:onSuccess',
+                                                ),
                                             ),
                                             'htmlTemplate' => '<span><b></b></span>',
-                                           ),                                           
-                            
+                                           ),
+
                                'slider' => array(
                                             'labelExpression' => '$data->is_slider == 0 ?  Yii::t("main","Show in slider") : Yii::t("main","Delete from slider")',
                                             'url' => 'Yii::app()->controller->createUrl("setstatus", array("id" => $data->post_id, "is_slider" => (!$data->is_slider) ? 1:0))',
@@ -130,14 +130,14 @@ $dateFilter = $this->widget('yiiwheels.widgets.datepicker.WhDatePicker', array(
                                             'options' => array(
                                                 'rel' => 'nofollow',
                                                 'ajax' => array(
-                                                    'type' => 'get', 
-                                                    'url'=>'js:$(this).attr("href")', 
+                                                    'type' => 'get',
+                                                    'url'=>'js:$(this).attr("href")',
                                                     'beforeSend' => 'js:onBeforeSend',
-                                                    'success' => 'js:onSuccess', 
-                                                ), 
+                                                    'success' => 'js:onSuccess',
+                                                ),
                                             ),
                                             'htmlTemplate' => '<span><b></b></span>',
-                                           ),                                           
+                                           ),
 
                            'delete'   => array(
                                            'label'=>Yii::t("main","Delete"),

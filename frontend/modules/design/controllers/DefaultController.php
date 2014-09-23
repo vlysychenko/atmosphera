@@ -24,13 +24,13 @@ if(isset($categoryId)){
                                                         LEFT JOIN users AS u ON u.`user_id` = n.`user_id`
                                                         LEFT JOIN posting AS p ON p.`post_id` = n.`post_id`
                                                         WHERE p.is_active = 1 AND n.`publication_date` <= NOW() AND n.`category` ='.$categoryId.'
-                                                        ORDER BY n.`publication_date` DESC');
+                                                        ORDER BY n.is_top DESC, n.`publication_date` DESC');
 }else{
     $sqlComand = Yii::app()->db->createCommand('SELECT n.post_id, p.`title` AS p_title, n.`publication_date`, u.`firstname`, u.`lastname`, n.anounce, n.content FROM design AS n
                                                         LEFT JOIN users AS u ON u.`user_id` = n.`user_id`
                                                         LEFT JOIN posting AS p ON p.`post_id` = n.`post_id`
                                                         WHERE p.is_active = 1 AND n.`publication_date` <= NOW()
-                                                        ORDER BY n.`publication_date` DESC');
+                                                        ORDER BY n.is_top DESC, n.`publication_date` DESC');
 
 }
 

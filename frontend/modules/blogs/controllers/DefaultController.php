@@ -20,7 +20,7 @@ class DefaultController extends FrontendController
                                                         LEFT JOIN users AS u ON u.`user_id` = n.`user_id`
                                                         LEFT JOIN posting AS p ON p.`post_id` = n.`post_id`
                                                         WHERE p.is_active = 1 AND n.`publication_date` <= NOW()
-                                                        ORDER BY n.`publication_date` DESC');
+                                                        ORDER BY n.is_top DESC, n.`publication_date` DESC');
         $count=Yii::app()->db->createCommand('SELECT count(n.post_id) FROM news AS n
                                                         LEFT JOIN users AS u ON u.`user_id` = n.`user_id`
                                                         LEFT JOIN posting AS p ON p.`post_id` = n.`post_id`

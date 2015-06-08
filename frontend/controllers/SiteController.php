@@ -80,8 +80,9 @@ class SiteController extends FrontendController
         $path = Otherproperties::model()->findByPk('mainpage');
         if(!$path->value){
             $image = '';
-        }else $image = '/upload/'.$path->value;
-
+        } else {
+            $image = Yii::app()->params['uploadUrl'].$path->value;
+        }
         return $image;
     }
 }

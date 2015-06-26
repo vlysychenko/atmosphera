@@ -85,7 +85,7 @@ class Horoscope extends CActiveRecord
 //		$criteria->compare('t.post_id',$this->post_id,true);
 		$criteria->compare('t.content',$this->content,true);
 		$criteria->compare('t.publication_date',$this->publication_date,true);
-//        DebugBreak();
+
 //        if(isset($_GET['Horoscope']['title'])){
 //            $criteria->with = array('post');
 //            $post = new Posting();

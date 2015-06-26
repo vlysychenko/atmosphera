@@ -85,7 +85,7 @@ class News extends CActiveRecord
 
     
     //function before delete news record
-    public function beforeDelete() {//DebugBreak();
+    public function beforeDelete() {
         $db = $this->getDbConnection();
         if ($db->getCurrentTransaction() === null) {         //if do not exists current...
             $this->_transaction = $db->beginTransaction();   // ... start new transaction

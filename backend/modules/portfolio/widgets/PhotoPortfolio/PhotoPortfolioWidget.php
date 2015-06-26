@@ -191,7 +191,7 @@ class PhotoPortfolioWidget extends CWidget
         $request = array();
         $model = new FileForm;
         $file = CUploadedFile::getInstance($model, 'file');
-        if ($model->validate()) {//DebugBreak();
+        if ($model->validate()) {
 
           //check extension of uploaded file  
             $types = PhotoFileForm::getImageExtensions();

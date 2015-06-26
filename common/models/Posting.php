@@ -103,7 +103,7 @@ class Posting extends CActiveRecord
     }  */
     
     //function before delete posting record
-    public function beforeDelete() {//DebugBreak();
+    public function beforeDelete() {
         $tagposts = Tagpost::model()->findAll('post_id = :post_id', array(':post_id'=>$this->post_id));
         if (!empty($tagposts))
             foreach($tagposts as $tagpost)   //delete all tags relations
@@ -112,7 +112,7 @@ class Posting extends CActiveRecord
     }
 
     //function after delete posting record
-    public function afterDelete() {//DebugBreak();
+    public function afterDelete() {
         Portfolio::model()->batchDelete(array($this->gallery_id));   //deleting via DeletableBehavior
         return parent::afterDelete();  //run parent event handler
     }
@@ -178,7 +178,7 @@ class Posting extends CActiveRecord
 	}
     
   //action for activate / deactivate
-    public static function setPostParam($id, $paramName, $paramValue){//DebugBreak();
+    public static function setPostParam($id, $paramName, $paramValue){
         $transaction = Yii::app()->db->beginTransaction();
         try {       
            $posts = Posting::model()->findByPk($id);

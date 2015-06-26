@@ -13,7 +13,7 @@ class GenImageCommand extends CConsoleCommand
         $countTotal = Photo::model()->count($criteia);
         echo "total count of photo: ".$countTotal."\n\r";
         echo "start process... please wait\n\r";
-        $offset = 0;//DebugBreak();
+        $offset = 0;
         $step = floor($countTotal / 10);
         $criteia->limit = $step;
         $criteia->offset = $offset;

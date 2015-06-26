@@ -64,8 +64,8 @@ class GLinkPager extends CLinkPager{
         $buttons[]=$this->createPageButton($this->prevPageLabel,$page,'last',$currentPage<=0,false);
         }
         // internal pages
-        for($i=$beginPage;$i<=$endPage;++$i){
-//                    debugBreak();
+        for($i=$beginPage;$i<=$endPage;++$i)
+        {
             if($i == $beginPage){
                 $buttons[]=$this->createPageButton($i+1,$i,'last',false,$i==$currentPage);
             }else{

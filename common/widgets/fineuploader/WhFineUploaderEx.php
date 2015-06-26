@@ -15,7 +15,7 @@ class WhFineUploaderEx extends WhFineUploader
   
     //--- Overrided method: Registers required client script for fineuploader
     public function registerClientScript()
-    {//DebugBreak();
+    {
         //publish assets dir 
         $path      = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'assets';
         $assetsUrl = $this->getAssetsUrl($path);

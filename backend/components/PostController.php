@@ -38,7 +38,7 @@ class PostController extends BackendController
     }
     
   //action for is_top
-    public function actionSetstatus(){//DebugBreak();
+    public function actionSetstatus(){
         $id = Yii::app()->request->getParam('id');
         $is_active = Yii::app()->request->getParam('is_active');
         $is_top = Yii::app()->request->getParam('is_top');
@@ -55,7 +55,7 @@ class PostController extends BackendController
     }
 
     
-    public function setParam($id, $paramName, $paramValue, $maxCount = 0) {//DebugBreak();
+    public function setParam($id, $paramName, $paramValue, $maxCount = 0) {
         $tablename = CActiveRecord::model($this->_modelclass)->tableName();
         $transaction = Yii::app()->db->beginTransaction();
         try {       
@@ -86,7 +86,7 @@ class PostController extends BackendController
     */
     public function actionDelete()
     {
-        if(Yii::app()->request->isPostRequest) {//DebugBreak();
+        if(Yii::app()->request->isPostRequest) {
             // we only allow deletion via POST request
             $id = Yii::app()->request->getParam('id');
             if ($model = CActiveRecord::model($this->_modelclass)->findByPk($id)) {

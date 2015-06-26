@@ -4,7 +4,6 @@ class DefaultController extends BackendController
 {
     public function actionIndex()
     {
-//        DebugBreak();
         $file = dirname(__FILE__).'/../../../../common/config/about-us.php';
         $content = file_get_contents($file);
         $model = new AboutForm();

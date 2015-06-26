@@ -154,7 +154,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                     'portfolio' => $portfolio,
                     'portfolioType' => 1,
                     'uploadAction' => Yii::app()->createUrl('portfolio/default/uploadfile'),
-                    'photoCountMax' => 1,
+                    'photoCountMax' => 0,
                     'allowedExtensions' => Yii::app()->params['upload']['image']['allowedExtensions'],//array('gif', 'jpg', 'jpeg', 'png'),
                 ));
             ?>

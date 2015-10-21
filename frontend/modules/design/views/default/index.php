@@ -1,6 +1,9 @@
             <div id='ajaxUp' class="container">
                 <div class="content">
-                <? $this->widget('application.widgets.BlogsSlider.BlogsSliderWidget', array('sliderData' => $sliderData));?>
+                    <?php 
+                    // Показать виджет с дизайнами, которые должны быть в слайдере
+                    $this->widget('application.widgets.BlogsSlider.BlogsSliderWidget', array('sliderData' => $sliderData));
+                    ?>
                     <div class="content-block">
                         <div class="title"><?echo Yii::t('main', 'Design')?></div>
                         <?php $this->widget('zii.widgets.CListView', array(

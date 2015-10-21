@@ -8,7 +8,7 @@
         $imgUrl = ImageHelper::imageUrl('article_slider',$blogs['filename'])
     ?>
     <li title="<?=$title?>">
-        <a href="<?=Yii::app()->createAbsoluteUrl('blogs/default/view', array('id'=>$blogs['id']))?>">
+        <a href="<?=Yii::app()->createAbsoluteUrl('design/default/view', array('id'=>$blogs['id']))?>">
             <img style="width: 335px; height: 228px;" src="<?=$imgUrl?>" alt="<?=$title?>" title="<?=$title?>">
             <span>
                 <span class="album-title"><?=$title?></span>
